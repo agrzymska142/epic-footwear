@@ -1,0 +1,56 @@
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# User-specific files (MonoDevelop/Xamarin Studio)
+*.userprefs
+
+# Mono Auto Generated Files
+mono_crash.*
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Compiled executables
+*.exe
+*.out
+*.app
+
+# NuGet Packages
+*.nupkg
+# The packages folder can be ignored because of Package Restore
+**/packages/*
+# Windows image file caches
+*.png
+*.jpg
+*.ico
+
+# Logs
+*.log
+
+# SQLite database files
+*.sqlite
+
+# VS Code directory
+.vscode/
+# Visual Studio Code .history directory
+.history/
+
+# Visual Studio .vscode directory
+.vs/
+
