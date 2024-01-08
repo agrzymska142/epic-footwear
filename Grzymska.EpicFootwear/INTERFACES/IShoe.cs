@@ -1,11 +1,12 @@
-﻿namespace Grzymska.EpicFootwear.Interfaces
+﻿using Grzymska.EpicFootwear.Core;
+
+namespace Grzymska.EpicFootwear.Interfaces
 {
     public interface IShoe
     {
         int ID { get; set; }
         String Name { get; set; }
         IBrand Brand { get; set; }
-        
-        // TODO: dodaj enumy
+        ShoeType ShoeType { get; set; }
     }
 }
