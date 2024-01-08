@@ -13,9 +13,5 @@
                 UriSource="D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\logo.png" />
             </Image.Source>
         </Image>
-        <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" Margin="27,147,28,101"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="27,338,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.198,0.485"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="76,338,0,0" VerticalAlignment="Top"/>
-
     </Grid>
 </Window>

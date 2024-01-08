@@ -54,3 +54,6 @@ ehthumbs.db
 # Visual Studio .vscode directory
 .vs/
 
+.bin/
+.obj/
+
