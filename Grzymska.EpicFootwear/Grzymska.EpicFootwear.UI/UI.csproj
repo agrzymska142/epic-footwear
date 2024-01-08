@@ -13,4 +13,8 @@
     <Content Include="ikona.ico" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="ViewModels\" />
+  </ItemGroup>
+
 </Project>

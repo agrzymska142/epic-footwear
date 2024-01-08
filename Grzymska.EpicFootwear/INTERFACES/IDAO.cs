@@ -2,16 +2,16 @@
 {
     public interface IDAO
     {
-        IEnumerable<IShoe> GetAllCameras();
+        IEnumerable<IShoe> GetAllShoes();
         IEnumerable<IBrand> GetAllBrands();
 
-        IShoe SaveCamera(IShoe shoe);
-        IBrand SaveBrand(IBrand brand);
+        void SaveShoe(IShoe shoe);
+        void SaveBrand(IBrand brand);
 
-        IShoe NewCamera();
+        IShoe NewShoe();
         IBrand NewBrand();
 
         void DeleteBrand(IBrand brand);
-        void DeleteCamera(IShoe shoe);
+        void DeleteShoe(IShoe shoe);
     }
 }

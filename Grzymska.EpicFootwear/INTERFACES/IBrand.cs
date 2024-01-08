@@ -3,8 +3,8 @@
     public interface IBrand
     {
         int ID { get; set; }
-        String Name { get; set; }
-        String Country { get; set; }
+        string Name { get; set; }
+        string Country { get; set; }
         int Founded { get; set; }
     }
 }

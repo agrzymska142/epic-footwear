@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interfaces", "INTERFACES\In
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{E468B098-3C05-43C8-8F99-57B9465CE167}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAOMock", "DAOMock\DAOMock.csproj", "{142CDDA3-584F-427F-9675-1C5992D48785}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAOSQL", "DAOSQL\DAOSQL.csproj", "{68449140-7919-4897-B73B-03E5B2D581CA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{E468B098-3C05-43C8-8F99-57B9465CE167}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E468B098-3C05-43C8-8F99-57B9465CE167}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E468B098-3C05-43C8-8F99-57B9465CE167}.Release|Any CPU.Build.0 = Release|Any CPU
+		{142CDDA3-584F-427F-9675-1C5992D48785}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{142CDDA3-584F-427F-9675-1C5992D48785}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{142CDDA3-584F-427F-9675-1C5992D48785}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{142CDDA3-584F-427F-9675-1C5992D48785}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68449140-7919-4897-B73B-03E5B2D581CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68449140-7919-4897-B73B-03E5B2D581CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68449140-7919-4897-B73B-03E5B2D581CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68449140-7919-4897-B73B-03E5B2D581CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

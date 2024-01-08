@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("INTERFACES")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("DAOSQL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyProductAttribute("INTERFACES")]
-[assembly: System.Reflection.AssemblyTitleAttribute("INTERFACES")]
+[assembly: System.Reflection.AssemblyProductAttribute("DAOSQL")]
+[assembly: System.Reflection.AssemblyTitleAttribute("DAOSQL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Wygenerowane przez klasę WriteCodeFragment programu MSBuild.
