@@ -1,0 +1,6 @@
+D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear\INTERFACES\obj\Debug\net8.0\Interfaces.GeneratedMSBuildEditorConfig.editorconfig
+D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear\INTERFACES\obj\Debug\net8.0\Interfaces.AssemblyInfoInputs.cache
+D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear\INTERFACES\obj\Debug\net8.0\Interfaces.AssemblyInfo.cs
+D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear\INTERFACES\obj\Debug\net8.0\Interfaces.csproj.CoreCompileInputs.cache
+D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear\INTERFACES\obj\Debug\net8.0\Interfaces.MvcApplicationPartsAssemblyInfo.cache
+D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear\INTERFACES\obj\Debug\net8.0\Interfaces.sourcelink.json

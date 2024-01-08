@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UI", "Grzymska.EpicFootwear.UI\UI.csproj", "{0F836B38-267F-47AD-A5F6-B4FDC4E37E90}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interfaces", "INTERFACES\Interfaces.csproj", "{19308401-4EC5-4FC0-AA8D-82D82597B635}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interfaces", "INTERFACES\Interfaces.csproj", "{19308401-4EC5-4FC0-AA8D-82D82597B635}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core", "Core\Core.csproj", "{E468B098-3C05-43C8-8F99-57B9465CE167}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{E468B098-3C05-43C8-8F99-57B9465CE167}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DAOMock", "DAOMock\DAOMock.csproj", "{142CDDA3-584F-427F-9675-1C5992D48785}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAOMock", "DAOMock\DAOMock.csproj", "{142CDDA3-584F-427F-9675-1C5992D48785}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DAOSQL", "DAOSQL\DAOSQL.csproj", "{68449140-7919-4897-B73B-03E5B2D581CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAOSQL", "DAOSQL\DAOSQL.csproj", "{68449140-7919-4897-B73B-03E5B2D581CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UI", "UI\UI.csproj", "{4A62620D-D2AC-4238-9633-DC38EE8AAFC1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,10 +19,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0F836B38-267F-47AD-A5F6-B4FDC4E37E90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0F836B38-267F-47AD-A5F6-B4FDC4E37E90}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0F836B38-267F-47AD-A5F6-B4FDC4E37E90}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0F836B38-267F-47AD-A5F6-B4FDC4E37E90}.Release|Any CPU.Build.0 = Release|Any CPU
 		{19308401-4EC5-4FC0-AA8D-82D82597B635}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{19308401-4EC5-4FC0-AA8D-82D82597B635}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19308401-4EC5-4FC0-AA8D-82D82597B635}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -39,6 +35,10 @@ Global
 		{68449140-7919-4897-B73B-03E5B2D581CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68449140-7919-4897-B73B-03E5B2D581CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68449140-7919-4897-B73B-03E5B2D581CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A62620D-D2AC-4238-9633-DC38EE8AAFC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A62620D-D2AC-4238-9633-DC38EE8AAFC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A62620D-D2AC-4238-9633-DC38EE8AAFC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A62620D-D2AC-4238-9633-DC38EE8AAFC1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

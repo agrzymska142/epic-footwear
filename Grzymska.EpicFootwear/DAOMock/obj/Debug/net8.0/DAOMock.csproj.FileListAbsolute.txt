@@ -1,0 +1,6 @@
+D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear\DAOMock\obj\Debug\net8.0\DAOMock.GeneratedMSBuildEditorConfig.editorconfig
+D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear\DAOMock\obj\Debug\net8.0\DAOMock.AssemblyInfoInputs.cache
+D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear\DAOMock\obj\Debug\net8.0\DAOMock.AssemblyInfo.cs
+D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear\DAOMock\obj\Debug\net8.0\DAOMock.csproj.CoreCompileInputs.cache
+D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear\DAOMock\obj\Debug\net8.0\DAOMock.MvcApplicationPartsAssemblyInfo.cache
+D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear\DAOMock\obj\Debug\net8.0\DAOMock.sourcelink.json
