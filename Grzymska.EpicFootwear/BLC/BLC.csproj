@@ -8,6 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\DAOMock\DAOMock.csproj" />
+    <ProjectReference Include="..\DAOSQL\DAOSQL.csproj" />
     <ProjectReference Include="..\INTERFACES\Interfaces.csproj" />
   </ItemGroup>
 

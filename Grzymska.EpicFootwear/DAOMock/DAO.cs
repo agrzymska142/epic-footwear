@@ -12,22 +12,22 @@ namespace Grzymska.EpicFootwear.DAOMock
 
         public DAO() 
         {
-            _brands =
-            [
+            _brands = new List<IBrand>
+            {
                 new Brand(1, "Nike", "USA", 1964),
                 new Brand(2, "Ryłko", "Poland", 1964),
                 new Brand(3, "Dr. Martens", "Germany", 1945)
-            ];
+            };
 
-            _shoes =
-            [
+            _shoes = new List<IShoe>
+            {
                 new Shoe(1, "Air Jordan 1 Mid", _brands[0], Core.ShoeType.Sneakers),
                 new Shoe(2, "Ofelia", _brands[1], Core.ShoeType.Heels),
                 new Shoe(3, "1460 Pascal Virginia", _brands[2], Core.ShoeType.Boots),
                 new Shoe(4, "Metcon 9", _brands[0], Core.ShoeType.Sport),
                 new Shoe(5, "Andie", _brands[1], Core.ShoeType.Sandals),
-                new Shoe(6, "Myles Brando", _brands[3], Core.ShoeType.Sandals)
-            ];
+                new Shoe(6, "Myles Brando", _brands[2], Core.ShoeType.Sandals)
+            };
         }
 
         public IEnumerable<IBrand> GetAllBrands()

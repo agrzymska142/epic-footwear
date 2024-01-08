@@ -15,6 +15,38 @@
           "Microsoft.AspNetCore.App"
         ]
       },
+      "DAOMock/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Interfaces": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DAOMock.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DAOMock.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "DAOSQL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Interfaces": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DAOSQL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DAOSQL.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "Interfaces/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
@@ -39,6 +71,16 @@
       "path": "../Core/Core.csproj",
       "msbuildProject": "../Core/Core.csproj"
     },
+    "DAOMock/1.0.0": {
+      "type": "project",
+      "path": "../DAOMock/DAOMock.csproj",
+      "msbuildProject": "../DAOMock/DAOMock.csproj"
+    },
+    "DAOSQL/1.0.0": {
+      "type": "project",
+      "path": "../DAOSQL/DAOSQL.csproj",
+      "msbuildProject": "../DAOSQL/DAOSQL.csproj"
+    },
     "Interfaces/1.0.0": {
       "type": "project",
       "path": "../INTERFACES/Interfaces.csproj",
@@ -47,6 +89,8 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "DAOMock >= 1.0.0",
+      "DAOSQL >= 1.0.0",
       "Interfaces >= 1.0.0"
     ]
   },
@@ -77,6 +121,12 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
+            "D:\\Studia\\Semestr VII\\Programowanie Wizualne\\epic-footwear\\Grzymska.EpicFootwear\\DAOMock\\DAOMock.csproj": {
+              "projectPath": "D:\\Studia\\Semestr VII\\Programowanie Wizualne\\epic-footwear\\Grzymska.EpicFootwear\\DAOMock\\DAOMock.csproj"
+            },
+            "D:\\Studia\\Semestr VII\\Programowanie Wizualne\\epic-footwear\\Grzymska.EpicFootwear\\DAOSQL\\DAOSQL.csproj": {
+              "projectPath": "D:\\Studia\\Semestr VII\\Programowanie Wizualne\\epic-footwear\\Grzymska.EpicFootwear\\DAOSQL\\DAOSQL.csproj"
+            },
             "D:\\Studia\\Semestr VII\\Programowanie Wizualne\\epic-footwear\\Grzymska.EpicFootwear\\INTERFACES\\Interfaces.csproj": {
               "projectPath": "D:\\Studia\\Semestr VII\\Programowanie Wizualne\\epic-footwear\\Grzymska.EpicFootwear\\INTERFACES\\Interfaces.csproj"
             }

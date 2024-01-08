@@ -7,4 +7,8 @@
     <RootNamespace>Grzymska.EpicFootwear.DAOSQL</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\INTERFACES\Interfaces.csproj" />
+  </ItemGroup>
+
 </Project>

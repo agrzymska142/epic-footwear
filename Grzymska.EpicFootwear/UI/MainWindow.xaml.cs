@@ -8,14 +8,24 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Grzymska.EpicFootwear.BLC;
+using System.Configuration;
 
 namespace Grzymska.EpicFootwear.UI
 {
     public partial class MainWindow : Window
     {
+        static public DataProvider DataProvider;
+
         public MainWindow()
         {
             InitializeComponent();
+
+            string DAO_Name = ConfigurationManager.AppSettings["DAO_Name"];
+            if( DAO_Name != null )
+            {
+                DataProvider = new DataProvider(DAO_Name);
+            }
         }
     }
 }

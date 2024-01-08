@@ -9,7 +9,7 @@ namespace Grzymska.EpicFootwear.BLC
 
         public DataProvider(string daoPath)
         {
-            Assembly a = Assembly.UnsafeLoadFrom(daoPath); 
+            Assembly a = Assembly.UnsafeLoadFrom(daoPath + ".dll"); 
             Type classToCreate = null;
 
             foreach (Type type in a.GetTypes())

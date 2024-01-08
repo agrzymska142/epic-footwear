@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "6bNYNY6fw1d0EuUPRjC0f9uiMjlvz+SX5Wq3bhgGJhC8AeM87IV+3qFe9ltD0gyNuk6W8TCeWy8F8ZaQzs8rwA==",
+  "dgSpecHash": "hPoUsN8DOpjRBJZeSICAWbidF1utYr3+MAEbWfLMkoRNtP7xMCxubvZkMlxOqfmRVMSN/yAhP99Fn6yIn1o1Lw==",
   "success": true,
   "projectFilePath": "D:\\Studia\\Semestr VII\\Programowanie Wizualne\\epic-footwear\\Grzymska.EpicFootwear\\UI\\UI.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Agnieszka\\.nuget\\packages\\system.configuration.configurationmanager\\8.0.0\\system.configuration.configurationmanager.8.0.0.nupkg.sha512",
+    "C:\\Users\\Agnieszka\\.nuget\\packages\\system.diagnostics.eventlog\\8.0.0\\system.diagnostics.eventlog.8.0.0.nupkg.sha512",
+    "C:\\Users\\Agnieszka\\.nuget\\packages\\system.security.cryptography.protecteddata\\8.0.0\\system.security.cryptography.protecteddata.8.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

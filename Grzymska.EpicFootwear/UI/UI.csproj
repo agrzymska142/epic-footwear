@@ -7,6 +7,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
     <ApplicationIcon>ikona.ico</ApplicationIcon>
+	<RootNamespace>Grzymska.EpicFootwear.UI</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
@@ -15,6 +16,14 @@
 
   <ItemGroup>
     <Folder Include="ViewModels\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BLC\BLC.csproj" />
   </ItemGroup>
 
 </Project>
