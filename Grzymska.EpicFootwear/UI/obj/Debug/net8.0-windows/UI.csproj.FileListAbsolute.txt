@@ -72,3 +72,13 @@ D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear
 D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear\UI\bin\Debug\net8.0-windows\DAOSQL.dll
 D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear\UI\bin\Debug\net8.0-windows\DAOMock.pdb
 D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear\UI\bin\Debug\net8.0-windows\DAOSQL.pdb
+D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear\UI\obj\Debug\net8.0-windows\Views\ViewShoes.g.cs
+D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear\UI\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear\UI\obj\Debug\net8.0-windows\Views\ViewShoes.baml
+D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear\UI\obj\Debug\net8.0-windows\App.baml
+D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear\UI\obj\Debug\net8.0-windows\Views\AddShoes.g.cs
+D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear\UI\obj\Debug\net8.0-windows\Views\AddShoes.baml
+D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear\UI\obj\Debug\net8.0-windows\Views\ViewBrands.g.cs
+D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear\UI\obj\Debug\net8.0-windows\Views\ViewBrands.baml
+D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear\UI\obj\Debug\net8.0-windows\Views\AddBrand.g.cs
+D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear\UI\obj\Debug\net8.0-windows\Views\AddBrand.baml
