@@ -7,13 +7,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Data;
 using Grzymska.EpicFootwear.BLC;
+using Grzymska.EpicFootwear.DAOMock;
 using Grzymska.EpicFootwear.Interfaces;
 
 namespace Grzymska.EpicFootwear.UI.ViewModels
 {
     internal class ShoeListViewModel : ViewModelBase
     {
-        public ObservableCollection<ShoeViewModel> Shoes { get; set; } = new ObservableCollection<ShoeViewModel>();
+        private ObservableCollection<ShoeViewModel> _shoes;
+        public ObservableCollection<ShoeViewModel> Shoes => _shoes;
 
         private ListCollectionView _view;
 
@@ -28,6 +30,7 @@ namespace Grzymska.EpicFootwear.UI.ViewModels
         {
             _provider = App.Provider;
             OnPropertyChanged("Shoes");
+            _shoes = new ObservableCollection<ShoeViewModel>();
             GetAllShoes();
 
             _view = (ListCollectionView)CollectionViewSource.GetDefaultView(Shoes);
@@ -38,7 +41,10 @@ namespace Grzymska.EpicFootwear.UI.ViewModels
 
         private void GetAllShoes()
         {
-            _provider.GetAllShoes();
+            foreach (var shoe in _provider.GetAllShoes())
+            {
+                _shoes.Add(new ShoeViewModel(shoe));
+            }
         }
 
         private void FilterData()
@@ -71,7 +77,7 @@ namespace Grzymska.EpicFootwear.UI.ViewModels
         }
         private void AddNewShoe()
         {
-            SelectedShoe = new ShoeViewModel(_provider.NewShoe(), (List<IBrand>)_provider.GetAllBrands(), _provider);
+            SelectedShoe = new ShoeViewModel(_provider.NewShoe());
             SelectedShoe.Validate();
         }
 

@@ -24,20 +24,20 @@ namespace Grzymska.EpicFootwear.UI.ViewModels
 
         private DataProvider _provider;
 
-        public ShoeViewModel(IShoe shoe, List<IBrand> listBrands, DataProvider provider)
+        public ShoeViewModel(IShoe shoe)
         {
             _shoe = shoe;
-            _provider = provider;
+            _provider = App.Provider;
             _shoeTypes = new ObservableCollection<ShoeType>((IEnumerable<ShoeType>)Enum.GetValues(typeof(ShoeType)));
-            _brands = new ObservableCollection<IBrand>(listBrands);
+            GetAllBrands();
 
             _saveShoeCommand = new RelayCommand(param => SaveShoe());
             //cancel command
         }
 
-        public ShoeViewModel(DataProvider provider)
+        public ShoeViewModel()
         {
-            _provider = provider;
+            _provider = App.Provider;
             _shoe = _provider.NewShoe();
             _shoeTypes = new ObservableCollection<ShoeType>((IEnumerable<ShoeType>)Enum.GetValues(typeof(ShoeType)));
             GetAllBrands();
@@ -50,6 +50,15 @@ namespace Grzymska.EpicFootwear.UI.ViewModels
         {
             List<IBrand> listBrands = (List<IBrand>)_provider.GetAllBrands();
             _brands = new ObservableCollection<IBrand>(listBrands);
+        }
+
+        public int ID
+        {
+            get => _shoe.ID;
+            set
+            {
+                _shoe.ID = value;
+            }
         }
 
         [Required(ErrorMessage = "Name must be specified!")]
@@ -100,10 +109,8 @@ namespace Grzymska.EpicFootwear.UI.ViewModels
         }
 
         private RelayCommand _cancelCommand;
-        /*public RelayCommand CancelCommand
-        {
-            TODO
-        }*/
+        //TODO
+        public RelayCommand CancelCommand;
 
         public void Validate()
         {

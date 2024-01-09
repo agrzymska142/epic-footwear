@@ -69,14 +69,16 @@
             Grid.Column="0"
             Content="Submit"
             VerticalAlignment="Bottom"
-            HorizontalAlignment="Left"/>
+            HorizontalAlignment="Left"
+            Command="{Binding SaveBrandCommand}" />
 
             <Button
             Grid.Column="1"
             Margin="10 0 0 0"
             Content="Cancel"
             VerticalAlignment="Bottom"
-            HorizontalAlignment="Left"/>
+            HorizontalAlignment="Left"
+            Command="{Binding CancelCommand}" />
         </Grid>
 
 

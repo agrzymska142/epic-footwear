@@ -24,7 +24,7 @@ namespace Grzymska.EpicFootwear.UI
 
             MainWindow = new MainWindow()
             {
-                DataContext = new MainViewModel(Provider)
+                DataContext = new MainViewModel()
             };
             MainWindow.Show();
 

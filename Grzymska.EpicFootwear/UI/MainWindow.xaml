@@ -30,6 +30,6 @@
             <Button Grid.Column="2" Content="Brands List" Margin="10 10 10 0" VerticalAlignment="Center" HorizontalAlignment="Left" />
         </Grid>
         
-        <views:AddShoes Grid.Row="1" Margin="20 20" DataContext="{Binding CurrentViewModel}" />
+        <views:ViewShoes Grid.Row="1" Margin="20 20" DataContext="{Binding CurrentViewModel}" />
     </Grid>
 </Window>

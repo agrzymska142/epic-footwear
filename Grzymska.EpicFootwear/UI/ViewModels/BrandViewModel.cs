@@ -17,20 +17,29 @@ namespace Grzymska.EpicFootwear.UI.ViewModels
 
         private DataProvider _provider;
 
-        public BrandViewModel(IBrand brand, DataProvider provider)
+        public BrandViewModel(IBrand brand)
         {
+            _provider = App.Provider;
             _brand = brand;
-            _provider = provider;
 
             _saveBrandCommand = new RelayCommand(param => SaveBrand());
             // cancel command
         }
 
         // raczej do usunięcia później
-        public BrandViewModel(DataProvider provider)
+        public BrandViewModel()
         {
-            _provider = provider;
+            _provider = App.Provider; ;
             _brand = _provider.NewBrand();
+        }
+
+        public int ID
+        {
+            get => _brand.ID;
+            set
+            {
+                _brand.ID = value;
+            }
         }
 
         [Required(ErrorMessage = "Name must be specified!")]
@@ -49,10 +58,10 @@ namespace Grzymska.EpicFootwear.UI.ViewModels
         [Required(ErrorMessage = "Country must be specified!")]
         public string Country
         {
-            get => _brand.Name;
+            get => _brand.Country;
             set
             {
-                _brand.Name = value;
+                _brand.Country = value;
                 Validate();
                 OnPropertyChanged("Country");
             }
@@ -82,10 +91,8 @@ namespace Grzymska.EpicFootwear.UI.ViewModels
         }
 
         private RelayCommand _cancelCommand;
-        /*public RelayCommand CancelCommand
-        {
-            TODO
-        }*/
+        // TODO
+        public RelayCommand CancelCommand;
 
         public void Validate()
         {

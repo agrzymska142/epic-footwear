@@ -11,9 +11,9 @@ namespace Grzymska.EpicFootwear.UI.ViewModels
     internal class MainViewModel : ViewModelBase
     {
         public ViewModelBase CurrentViewModel { get; }
-        public MainViewModel(DataProvider provider)
+        public MainViewModel()
         {
-            CurrentViewModel = new ShoeViewModel(provider);
+            CurrentViewModel = new ShoeListViewModel();
         }  
     }
 }

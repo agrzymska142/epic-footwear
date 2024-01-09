@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DAOSQL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d6eef60e1f5ce540452de2863d83ef2faeda9ac3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3a766e32c45ffe5a0683794873f2eb0444c78ee2")]
 [assembly: System.Reflection.AssemblyProductAttribute("DAOSQL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DAOSQL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
