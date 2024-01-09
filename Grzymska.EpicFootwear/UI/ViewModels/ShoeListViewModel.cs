@@ -26,7 +26,7 @@ namespace Grzymska.EpicFootwear.UI.ViewModels
 
         public ShoeListViewModel()
         {
-            _provider = MainWindow.Provider;
+            _provider = App.Provider;
             OnPropertyChanged("Shoes");
             GetAllShoes();
 
@@ -71,7 +71,7 @@ namespace Grzymska.EpicFootwear.UI.ViewModels
         }
         private void AddNewShoe()
         {
-            SelectedShoe = new ShoeViewModel(_provider.NewShoe(), (List<IBrand>)_provider.GetAllBrands());
+            SelectedShoe = new ShoeViewModel(_provider.NewShoe(), (List<IBrand>)_provider.GetAllBrands(), _provider);
             SelectedShoe.Validate();
         }
 

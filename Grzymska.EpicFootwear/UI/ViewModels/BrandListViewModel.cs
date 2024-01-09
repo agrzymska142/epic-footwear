@@ -25,7 +25,7 @@ namespace Grzymska.EpicFootwear.UI.ViewModels
 
         public BrandListViewModel()
         {
-            _provider = MainWindow.Provider;
+            _provider = App.Provider;
             OnPropertyChanged("Brands");
             GetAllBrands();
 
@@ -37,7 +37,7 @@ namespace Grzymska.EpicFootwear.UI.ViewModels
 
         private void GetAllBrands()
         {
-            _provider.GetAllBrands();
+            Brands = (ObservableCollection<BrandViewModel>)_provider.GetAllBrands();
         }
 
         private void FilterData()
@@ -70,7 +70,7 @@ namespace Grzymska.EpicFootwear.UI.ViewModels
         }
         private void AddNewBrand()
         {
-            SelectedBrand = new BrandViewModel(_provider.NewBrand());
+            SelectedBrand = new BrandViewModel(_provider.NewBrand(), _provider);
             SelectedBrand.Validate();
         }
 

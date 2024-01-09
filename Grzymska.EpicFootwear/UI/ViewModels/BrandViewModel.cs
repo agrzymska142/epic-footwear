@@ -26,6 +26,13 @@ namespace Grzymska.EpicFootwear.UI.ViewModels
             // cancel command
         }
 
+        // raczej do usunięcia później
+        public BrandViewModel(DataProvider provider)
+        {
+            _provider = provider;
+            _brand = _provider.NewBrand();
+        }
+
         [Required(ErrorMessage = "Name must be specified!")]
         [StringLength(100, MinimumLength = 3, ErrorMessage = "Name must be between 3 and 100 characters long!")]
         public string Name

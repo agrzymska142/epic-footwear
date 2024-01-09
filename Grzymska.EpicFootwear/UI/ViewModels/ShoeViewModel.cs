@@ -19,18 +19,38 @@ namespace Grzymska.EpicFootwear.UI.ViewModels
         private ObservableCollection<IBrand> _brands;
         public ObservableCollection<IBrand> Brands { get => _brands; }
 
+        private ObservableCollection<ShoeType> _shoeTypes;
+        public ObservableCollection<ShoeType> ShoeTypes { get => _shoeTypes; }
+
         private DataProvider _provider;
 
         public ShoeViewModel(IShoe shoe, List<IBrand> listBrands, DataProvider provider)
         {
             _shoe = shoe;
-            _brands = new ObservableCollection<IBrand>(listBrands);
             _provider = provider;
+            _shoeTypes = new ObservableCollection<ShoeType>((IEnumerable<ShoeType>)Enum.GetValues(typeof(ShoeType)));
+            _brands = new ObservableCollection<IBrand>(listBrands);
 
             _saveShoeCommand = new RelayCommand(param => SaveShoe());
             //cancel command
         }
 
+        public ShoeViewModel(DataProvider provider)
+        {
+            _provider = provider;
+            _shoe = _provider.NewShoe();
+            _shoeTypes = new ObservableCollection<ShoeType>((IEnumerable<ShoeType>)Enum.GetValues(typeof(ShoeType)));
+            GetAllBrands();
+
+            _saveShoeCommand = new RelayCommand(param => SaveShoe());
+            //cancel command
+        }
+
+        private void GetAllBrands()
+        {
+            List<IBrand> listBrands = (List<IBrand>)_provider.GetAllBrands();
+            _brands = new ObservableCollection<IBrand>(listBrands);
+        }
 
         [Required(ErrorMessage = "Name must be specified!")]
         [StringLength(100, MinimumLength = 3, ErrorMessage = "Name must be between 3 and 100 characters long!")]

@@ -9,6 +9,7 @@
       "UI/1.0.0": {
         "dependencies": {
           "BLC": "1.0.0",
+          "Interfaces": "1.0.0",
           "System.Configuration.ConfigurationManager": "8.0.0"
         },
         "runtime": {
