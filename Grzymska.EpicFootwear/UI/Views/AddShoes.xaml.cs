@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 
 namespace Grzymska.EpicFootwear.UI.Views
 {
-    /// <summary>
-    /// Logika interakcji dla klasy AddShoes.xaml
-    /// </summary>
     public partial class AddShoes : UserControl
     {
         public AddShoes()
