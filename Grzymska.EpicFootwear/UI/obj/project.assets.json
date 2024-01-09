@@ -280,6 +280,7 @@
   "projectFileDependencyGroups": {
     "net8.0-windows7.0": [
       "BLC >= 1.0.0",
+      "Interfaces >= 1.0.0",
       "System.Configuration.ConfigurationManager >= 8.0.0"
     ]
   },
@@ -312,6 +313,9 @@
           "projectReferences": {
             "D:\\Studia\\Semestr VII\\Programowanie Wizualne\\epic-footwear\\Grzymska.EpicFootwear\\BLC\\BLC.csproj": {
               "projectPath": "D:\\Studia\\Semestr VII\\Programowanie Wizualne\\epic-footwear\\Grzymska.EpicFootwear\\BLC\\BLC.csproj"
+            },
+            "D:\\Studia\\Semestr VII\\Programowanie Wizualne\\epic-footwear\\Grzymska.EpicFootwear\\INTERFACES\\Interfaces.csproj": {
+              "projectPath": "D:\\Studia\\Semestr VII\\Programowanie Wizualne\\epic-footwear\\Grzymska.EpicFootwear\\INTERFACES\\Interfaces.csproj"
             }
           }
         }

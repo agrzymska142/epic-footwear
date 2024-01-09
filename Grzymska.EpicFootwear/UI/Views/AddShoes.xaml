@@ -64,7 +64,7 @@
 
             <Button
                 Grid.Column="0"
-                Content="Save"
+                Content="Submit"
                 VerticalAlignment="Bottom"
                 HorizontalAlignment="Left"/>
 

@@ -15,7 +15,7 @@ namespace Grzymska.EpicFootwear.UI
 {
     public partial class MainWindow : Window
     {
-        static public DataProvider DataProvider;
+        static public DataProvider Provider;
 
         public MainWindow()
         {
@@ -24,7 +24,7 @@ namespace Grzymska.EpicFootwear.UI
             string DAO_Name = ConfigurationManager.AppSettings["DAO_Name"];
             if( DAO_Name != null )
             {
-                DataProvider = new DataProvider(DAO_Name);
+                Provider = new DataProvider(DAO_Name);
             }
         }
     }
