@@ -20,7 +20,6 @@ D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear
 D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear\Grzymska.EpicFootwear.UI\obj\Debug\net8.0-windows\UI.pdb
 D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear\Grzymska.EpicFootwear.UI\obj\Debug\net8.0-windows\UI.genruntimeconfig.cache
 D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear\Grzymska.EpicFootwear.UI\obj\Debug\net8.0-windows\ref\UI.dll
-D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear\UI\obj\Debug\net8.0-windows\MainWindow.g.cs
 D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear\UI\obj\Debug\net8.0-windows\App.g.cs
 D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear\UI\obj\Debug\net8.0-windows\UI_Content.g.cs
 D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear\UI\obj\Debug\net8.0-windows\UI_MarkupCompile.cache
@@ -49,7 +48,6 @@ D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear
 D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear\UI\bin\Debug\net8.0-windows\Core.pdb
 D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear\UI\bin\Debug\net8.0-windows\Interfaces.pdb
 D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear\UI\obj\Debug\net8.0-windows\UI.csproj.AssemblyReference.cache
-D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear\UI\obj\Debug\net8.0-windows\MainWindow.baml
 D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear\UI\obj\Debug\net8.0-windows\UI.g.resources
 D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear\UI\obj\Debug\net8.0-windows\UI.GeneratedMSBuildEditorConfig.editorconfig
 D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear\UI\obj\Debug\net8.0-windows\UI.AssemblyInfoInputs.cache
@@ -82,3 +80,5 @@ D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear
 D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear\UI\obj\Debug\net8.0-windows\Views\ViewBrands.baml
 D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear\UI\obj\Debug\net8.0-windows\Views\AddBrand.g.cs
 D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear\UI\obj\Debug\net8.0-windows\Views\AddBrand.baml
+D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear\UI\obj\Debug\net8.0-windows\Views\MainWindow.g.cs
+D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear\UI\obj\Debug\net8.0-windows\Views\MainWindow.baml

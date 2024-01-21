@@ -24,5 +24,10 @@ namespace Grzymska.EpicFootwear.UI.Views
         {
             InitializeComponent();
         }
+
+        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
