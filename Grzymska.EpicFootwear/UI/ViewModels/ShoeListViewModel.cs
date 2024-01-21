@@ -38,7 +38,8 @@ namespace Grzymska.EpicFootwear.UI.ViewModels
 
             _view = (ListCollectionView)CollectionViewSource.GetDefaultView(Shoes);
             _addNewShoeCommand = new NavigateCommand(navigationService);
-            //_filterDataCommand = new CommandBase(param => FilterData());
+            _deleteShoeCommand = new DeleteShoeCommand(this, provider);
+            //_filterDataCommand = new CommandBase(param => FilterData()); 
             //_deleteShoeCommand = new CommandBase(param => DeleteShoe());
         }
 
@@ -84,7 +85,7 @@ namespace Grzymska.EpicFootwear.UI.ViewModels
             SelectedShoe.Validate();
         }
 
-        private CommandBase _deleteShoeCommand;
+        /*private CommandBase _deleteShoeCommand;
         public CommandBase DeleteShoesCommand
         {
             get => _deleteShoeCommand;
@@ -93,6 +94,17 @@ namespace Grzymska.EpicFootwear.UI.ViewModels
         {
             _provider.DeleteShoe(SelectedShoe.Shoe);
             Shoes.Remove(SelectedShoe);
+        }*/
+
+
+        private CommandBase _deleteShoeCommand;
+        public CommandBase DeleteShoeCommand
+        {
+            get
+            {
+                OnPropertyChanged("Shoes");
+                return _deleteShoeCommand;
+            }
         }
     }
 }

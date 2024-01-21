@@ -23,7 +23,7 @@ namespace Grzymska.EpicFootwear.UI.ViewModels
             _provider = provider;
             _brand = brand;
 
-            _saveBrandCommand = new SubmitBrandCommand(this, provider);
+            _saveBrandCommand = new SubmitBrandCommand(this, provider, brandListNavigationService);
             _cancelCommand = new NavigateCommand(brandListNavigationService);
         }
 
@@ -33,7 +33,7 @@ namespace Grzymska.EpicFootwear.UI.ViewModels
             _provider = provider;
             _brand = _provider.NewBrand();
 
-            _saveBrandCommand = new SubmitBrandCommand(this, provider);
+            _saveBrandCommand = new SubmitBrandCommand(this, provider, brandListNavigationService);
             _cancelCommand = new NavigateCommand(brandListNavigationService);
         }
 

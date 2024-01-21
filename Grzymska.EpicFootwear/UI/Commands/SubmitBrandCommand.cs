@@ -13,11 +13,13 @@ namespace Grzymska.EpicFootwear.UI.Commands
     {
         private readonly DataProvider _provider;
         private readonly BrandViewModel _brandViewModel;
+        private readonly NavigationService _brandListNavigationService;
 
-        public SubmitBrandCommand(BrandViewModel brandViewModel, DataProvider provider)
+        public SubmitBrandCommand(BrandViewModel brandViewModel, DataProvider provider, NavigationService brandListNavigationService)
         {
             _brandViewModel = brandViewModel;
-            _provider = provider;   
+            _provider = provider;
+            _brandListNavigationService = brandListNavigationService;
         }
 
         public override void Execute(object parameter)
@@ -25,6 +27,8 @@ namespace Grzymska.EpicFootwear.UI.Commands
             IBrand brand = _brandViewModel.Brand;
 
             _provider.SaveBrand(brand);
+
+            _brandListNavigationService.Navigate();
         }
     }
 }

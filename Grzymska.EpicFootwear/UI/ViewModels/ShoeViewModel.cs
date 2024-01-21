@@ -116,6 +116,7 @@ namespace Grzymska.EpicFootwear.UI.ViewModels
             get => _cancelCommand;
         }
 
+
         public void Validate()
         {
             var validationContext = new ValidationContext(this, null, null);
