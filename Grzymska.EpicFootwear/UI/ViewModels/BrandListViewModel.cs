@@ -32,10 +32,8 @@ namespace Grzymska.EpicFootwear.UI.ViewModels
             _brandViewNavigationService = brandViewNavigationService;
 
             _view = (ListCollectionView)CollectionViewSource.GetDefaultView(Brands);
-            //_filterDataCommand = new CommandBase(param => FilterData());
             _addNewBrandCommand = new NavigateCommand(brandViewNavigationService);
-            //_editBrandCommand = new CommandBase(param => EditBrand());
-            //_deleteBrandCommand = new CommandBase(param => DeleteBrand());
+            _deleteBrandCommand = new DeleteBrandCommand(this, provider);
         }
 
         private void GetAllBrands()
@@ -95,14 +93,13 @@ namespace Grzymska.EpicFootwear.UI.ViewModels
         }
 
         private CommandBase _deleteBrandCommand;
-        public CommandBase DeleteBrandsCommand
+        public CommandBase DeleteBrandCommand
         {
-            get => _deleteBrandCommand;
-        }
-        private void DeleteBrand()
-        {
-            _provider.DeleteBrand(SelectedBrand.Brand);
-            Brands.Remove(SelectedBrand);
+            get
+            {
+                OnPropertyChanged("Brands");
+                return _deleteBrandCommand;
+            }
         }
     }
 }
