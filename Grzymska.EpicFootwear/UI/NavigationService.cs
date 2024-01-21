@@ -22,5 +22,10 @@ namespace Grzymska.EpicFootwear.UI
         {
             _navigationStore.CurrentViewModel = _createViewModel();
         }
+
+        public void Navigate(ViewModelBase viewModel)
+        {
+            _navigationStore.CurrentViewModel = viewModel;
+        }
     }
 }

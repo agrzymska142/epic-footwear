@@ -35,6 +35,7 @@ namespace Grzymska.EpicFootwear.UI.ViewModels
 
             _saveShoeCommand = new SubmitShoeCommand(this, provider, shoeListViewNavigationService);
             _cancelCommand = new NavigateCommand(shoeListViewNavigationService);
+            _editShoeCommand = new EditShoeCommand(this, shoeListViewNavigationService);
         }
 
         public ShoeViewModel(DataProvider provider, NavigationService shoeListViewNavigationService)
@@ -46,6 +47,7 @@ namespace Grzymska.EpicFootwear.UI.ViewModels
 
             _saveShoeCommand = new SubmitShoeCommand(this, provider, shoeListViewNavigationService);
             _cancelCommand = new NavigateCommand(shoeListViewNavigationService);
+            _editShoeCommand = new EditShoeCommand(this, shoeListViewNavigationService);
         }
 
         private void GetAllBrands()
@@ -100,20 +102,25 @@ namespace Grzymska.EpicFootwear.UI.ViewModels
             }
         }
 
+
         private CommandBase _saveShoeCommand;
         public CommandBase SaveShoeCommand
         {
             get => _saveShoeCommand;
         }
-        private void SaveShoe()
-        {
-            _provider.SaveShoe(Shoe);
-        }
+
 
         private CommandBase _cancelCommand;
         public CommandBase CancelCommand
         {
             get => _cancelCommand;
+        }
+
+
+        private CommandBase _editShoeCommand;
+        public CommandBase EditShoeCommand
+        {
+            get => _editShoeCommand;
         }
 
 

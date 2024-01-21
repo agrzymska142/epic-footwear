@@ -18,23 +18,25 @@ namespace Grzymska.EpicFootwear.UI.ViewModels
 
         private DataProvider _provider;
 
-        public BrandViewModel(IBrand brand, DataProvider provider, NavigationService brandListNavigationService)
+        public BrandViewModel(IBrand brand, DataProvider provider, NavigationService brandListViewNavigationService)
         {
             _provider = provider;
             _brand = brand;
 
-            _saveBrandCommand = new SubmitBrandCommand(this, provider, brandListNavigationService);
-            _cancelCommand = new NavigateCommand(brandListNavigationService);
+            _saveBrandCommand = new SubmitBrandCommand(this, provider, brandListViewNavigationService);
+            _cancelCommand = new NavigateCommand(brandListViewNavigationService);
+            _editBrandCommand = new EditBrandCommand(this, brandListViewNavigationService);
         }
 
         // raczej do usunięcia później
-        public BrandViewModel(DataProvider provider, NavigationService brandListNavigationService)
+        public BrandViewModel(DataProvider provider, NavigationService brandListViewNavigationService)
         {
             _provider = provider;
             _brand = _provider.NewBrand();
 
-            _saveBrandCommand = new SubmitBrandCommand(this, provider, brandListNavigationService);
-            _cancelCommand = new NavigateCommand(brandListNavigationService);
+            _saveBrandCommand = new SubmitBrandCommand(this, provider, brandListViewNavigationService);
+            _cancelCommand = new NavigateCommand(brandListViewNavigationService);
+            _editBrandCommand = new EditBrandCommand(this, brandListViewNavigationService);
         }
 
         public int ID
@@ -94,6 +96,12 @@ namespace Grzymska.EpicFootwear.UI.ViewModels
         public CommandBase CancelCommand
         {
             get => _cancelCommand;
+        }
+
+        private CommandBase _editBrandCommand;
+        public CommandBase EditBrandCommand
+        {
+            get => _editBrandCommand;
         }
 
         public void Validate()

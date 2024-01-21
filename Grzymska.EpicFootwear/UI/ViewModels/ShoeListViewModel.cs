@@ -20,24 +20,24 @@ namespace Grzymska.EpicFootwear.UI.ViewModels
 
         private ListCollectionView _view;
 
-        private CommandBase _filterDataCommand;
-        public CommandBase FilterDataCommand { get => _filterDataCommand; }
-
         private DataProvider _provider;
-        private NavigationService _navigationService;
+        private NavigationService _shoeViewNavigationService;
+        private NavigationService _shoeListViewNavigationService;
 
         public string FilterValue { get; set; }
 
-        public ShoeListViewModel(DataProvider provider, NavigationService navigationService)
+        public ShoeListViewModel(DataProvider provider, NavigationService shoeViewNavigationService, NavigationService shoeListViewNavigationService)
         {
             _provider = provider;
-            _navigationService = navigationService;
+            _shoeViewNavigationService = shoeViewNavigationService;
+            _shoeListViewNavigationService = shoeListViewNavigationService;
+            //_shoeListViewNavigationService = shoeListViewNavigationService;
             OnPropertyChanged("Shoes");
             _shoes = new ObservableCollection<ShoeViewModel>();
             GetAllShoes();
 
             _view = (ListCollectionView)CollectionViewSource.GetDefaultView(Shoes);
-            _addNewShoeCommand = new NavigateCommand(navigationService);
+            _addNewShoeCommand = new NavigateCommand(shoeViewNavigationService);
             _deleteShoeCommand = new DeleteShoeCommand(this, provider);
         }
 
@@ -45,19 +45,7 @@ namespace Grzymska.EpicFootwear.UI.ViewModels
         {
             foreach (var shoe in _provider.GetAllShoes())
             {
-                _shoes.Add(new ShoeViewModel(shoe, _provider, _navigationService));
-            }
-        }
-
-        private void FilterData()
-        {
-            if (string.IsNullOrEmpty(FilterValue))
-            {
-                _view.Filter = null;
-            }
-            else
-            {
-                _view.Filter = (c) => ((ShoeViewModel)c).Name.Contains(FilterValue);
+                _shoes.Add(new ShoeViewModel(shoe, _provider, _shoeListViewNavigationService));
             }
         }
 
@@ -72,15 +60,32 @@ namespace Grzymska.EpicFootwear.UI.ViewModels
             }
         }
 
+
+        private CommandBase _filterDataCommand;
+        public CommandBase FilterDataCommand 
+        { 
+            get => _filterDataCommand; 
+        }
+
+        private void FilterData()
+        {
+            if (string.IsNullOrEmpty(FilterValue))
+            {
+                _view.Filter = null;
+            }
+            else
+            {
+                _view.Filter = (c) => ((ShoeViewModel)c).Name.Contains(FilterValue);
+            }
+        }
+
+       
+
+
         private CommandBase _addNewShoeCommand;
         public CommandBase AddNewShoeCommand
         {
             get => _addNewShoeCommand;
-        }
-        private void AddNewShoe()
-        {
-            SelectedShoe = new ShoeViewModel(_provider.NewShoe(), _provider, _navigationService);
-            SelectedShoe.Validate();
         }
 
 

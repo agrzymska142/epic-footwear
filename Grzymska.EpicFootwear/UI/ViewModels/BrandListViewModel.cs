@@ -21,15 +21,18 @@ namespace Grzymska.EpicFootwear.UI.ViewModels
         private DataProvider _provider;
 
         private NavigationService _brandViewNavigationService;
+        private NavigationService _brandListViewNavigationService;
 
 
-        public BrandListViewModel(DataProvider provider, NavigationService brandViewNavigationService)
+        public BrandListViewModel(DataProvider provider, NavigationService brandViewNavigationService, NavigationService brandListViewNavigationService)
         {
             _provider = provider;
             _brands = new ObservableCollection<BrandViewModel>();
+            _brandViewNavigationService = brandViewNavigationService;
+            _brandListViewNavigationService = brandListViewNavigationService;
+
             OnPropertyChanged("Brands");
             GetAllBrands();
-            _brandViewNavigationService = brandViewNavigationService;
 
             _view = (ListCollectionView)CollectionViewSource.GetDefaultView(Brands);
             _addNewBrandCommand = new NavigateCommand(brandViewNavigationService);
@@ -40,7 +43,7 @@ namespace Grzymska.EpicFootwear.UI.ViewModels
         {
             foreach (var brand in _provider.GetAllBrands())
             {
-                _brands.Add(new BrandViewModel(brand, _provider, _brandViewNavigationService));
+                _brands.Add(new BrandViewModel(brand, _provider, _brandListViewNavigationService));
             }
         }
 

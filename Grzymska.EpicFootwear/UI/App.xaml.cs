@@ -52,7 +52,7 @@ namespace Grzymska.EpicFootwear.UI
 
         private ShoeListViewModel CreateShoeListViewModel()
         {
-            return new ShoeListViewModel(_provider, new NavigationService(_navigationStore, CreateShoeViewModel));
+            return new ShoeListViewModel(_provider, new NavigationService(_navigationStore, CreateShoeViewModel), new NavigationService(_navigationStore, CreateShoeListViewModel));
         }
 
         private ShoeViewModel CreateShoeViewModel()
@@ -62,7 +62,7 @@ namespace Grzymska.EpicFootwear.UI
 
         private BrandListViewModel CreateBrandListViewModel()
         {
-            return new BrandListViewModel(_provider, new NavigationService(_navigationStore, CreateBrandViewModel));
+            return new BrandListViewModel(_provider, new NavigationService(_navigationStore, CreateBrandViewModel), new NavigationService(_navigationStore, CreateBrandListViewModel));
         }
 
         private BrandViewModel CreateBrandViewModel()

@@ -42,12 +42,34 @@ namespace Grzymska.EpicFootwear.DAOMock
 
         public void SaveBrand(IBrand brand)
         {
-            _brands.Add(brand);
+            IBrand existingBrand = _brands.FirstOrDefault(b => b.ID == brand.ID);
+
+            if (existingBrand != null)
+            {
+                existingBrand.Name = brand.Name;
+                existingBrand.Country = brand.Country;
+                existingBrand.Founded = brand.Founded;
+            }
+            else
+            {
+                _brands.Add(brand);
+            }
         }
 
         public void SaveShoe(IShoe shoe)
         {
-            _shoes.Add(shoe);
+            IShoe existingShoe = _shoes.FirstOrDefault(s => s.ID == shoe.ID);
+
+            if (existingShoe != null)
+            {
+                existingShoe.Name = shoe.Name;
+                existingShoe.Brand = shoe.Brand;
+                existingShoe.ShoeType = shoe.ShoeType;
+            }
+            else
+            {
+                _shoes.Add(shoe);
+            }
         }
 
         public IBrand NewBrand()

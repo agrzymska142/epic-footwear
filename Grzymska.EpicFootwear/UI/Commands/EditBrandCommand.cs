@@ -1,5 +1,4 @@
 ﻿using Grzymska.EpicFootwear.BLC;
-using Grzymska.EpicFootwear.Interfaces;
 using Grzymska.EpicFootwear.UI.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -9,22 +8,20 @@ using System.Threading.Tasks;
 
 namespace Grzymska.EpicFootwear.UI.Commands
 {
-    /*internal class SeeShoeListCommand : CommandBase
+    internal class EditBrandCommand : CommandBase
     {
-        private readonly DataProvider _provider;
         private readonly BrandViewModel _brandViewModel;
+        private readonly NavigationService _brandViewNavigationService;
 
-        public SubmitBrandCommand(BrandViewModel brandViewModel, DataProvider provider)
+        public EditBrandCommand(BrandViewModel brandViewModel, NavigationService brandViewNavigationService)
         {
             _brandViewModel = brandViewModel;
-            _provider = provider;
+            _brandViewNavigationService = brandViewNavigationService;
         }
 
         public override void Execute(object parameter)
         {
-            IBrand brand = _brandViewModel.Brand;
-
-            _provider.SaveBrand(brand);
+            _brandViewNavigationService.Navigate(_brandViewModel);
         }
-    }*/
+    }
 }
