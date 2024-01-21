@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Grzymska.EpicFootwear.UI.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,14 @@ namespace Grzymska.EpicFootwear.UI.Views
         public ViewBrands()
         {
             InitializeComponent();
+        }
+
+        private void TextBoxChanged(object sender, TextChangedEventArgs e)
+        {
+            if (DataContext is BrandListViewModel brandListViewModel)
+            {
+                brandListViewModel.FilterDataCommand.Execute(brandListViewModel);
+            }
         }
     }
 }

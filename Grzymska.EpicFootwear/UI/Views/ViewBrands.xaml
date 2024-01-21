@@ -27,8 +27,10 @@
 
             <TextBox
                 Grid.Column="1"
-                Width="100"
-                Padding="2 5"/>
+                Width="150"
+                Padding="2 5"
+                Text="{Binding FilterValue, UpdateSourceTrigger=PropertyChanged}"
+                TextChanged="TextBoxChanged"/>
             <Button
                 Grid.Column="2"
                 Margin="5 0 0 0"

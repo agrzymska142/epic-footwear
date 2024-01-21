@@ -16,7 +16,8 @@ namespace Grzymska.EpicFootwear.UI.ViewModels
         private ObservableCollection<BrandViewModel> _brands;
         public ObservableCollection<BrandViewModel> Brands => _brands;
 
-        private ListCollectionView _view;
+        public string FilterValue { get; set; }
+        public ListCollectionView View;
 
         private DataProvider _provider;
 
@@ -33,10 +34,11 @@ namespace Grzymska.EpicFootwear.UI.ViewModels
 
             OnPropertyChanged("Brands");
             GetAllBrands();
+            View = (ListCollectionView)CollectionViewSource.GetDefaultView(Brands);
 
-            _view = (ListCollectionView)CollectionViewSource.GetDefaultView(Brands);
             _addNewBrandCommand = new NavigateCommand(brandViewNavigationService);
             _deleteBrandCommand = new DeleteBrandCommand(this, provider);
+            _filterDataCommand = new FilterBrandsCommand(this);
         }
 
         private void GetAllBrands()
@@ -58,20 +60,11 @@ namespace Grzymska.EpicFootwear.UI.ViewModels
             }
         }
 
-        public string FilterValue { get; set; }
      
         private CommandBase _filterDataCommand;
-        public CommandBase FilterDataCommand { get => _filterDataCommand; }
-        private void FilterData()
-        {
-            if (string.IsNullOrEmpty(FilterValue))
-            {
-                _view.Filter = null;
-            }
-            else
-            {
-                _view.Filter = (c) => ((BrandViewModel)c).Name.Contains(FilterValue);
-            }
+        public CommandBase FilterDataCommand 
+        { 
+            get => _filterDataCommand; 
         }
 
         private CommandBase _addNewBrandCommand;
@@ -79,20 +72,11 @@ namespace Grzymska.EpicFootwear.UI.ViewModels
         {
             get => _addNewBrandCommand;
         }
-        private void AddNewBrand()
-        {
-            SelectedBrand = new BrandViewModel(_provider.NewBrand(), _provider, _brandViewNavigationService);
-            SelectedBrand.Validate();
-        }
 
         private CommandBase _editBrandCommand;
         public CommandBase EditBrandCommand
         {
             get => _editBrandCommand;
-        }
-        private void EditBrand()
-        {
-            // TODO: otwórz okno dodawania przekazując selectedBrand
         }
 
         private CommandBase _deleteBrandCommand;

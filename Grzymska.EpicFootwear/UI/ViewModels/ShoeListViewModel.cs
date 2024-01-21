@@ -18,27 +18,26 @@ namespace Grzymska.EpicFootwear.UI.ViewModels
         private ObservableCollection<ShoeViewModel> _shoes;
         public ObservableCollection<ShoeViewModel> Shoes => _shoes;
 
-        private ListCollectionView _view;
+        public string FilterValue { get; set; }
+        public ListCollectionView View;
 
         private DataProvider _provider;
-        private NavigationService _shoeViewNavigationService;
         private NavigationService _shoeListViewNavigationService;
 
-        public string FilterValue { get; set; }
 
         public ShoeListViewModel(DataProvider provider, NavigationService shoeViewNavigationService, NavigationService shoeListViewNavigationService)
         {
             _provider = provider;
-            _shoeViewNavigationService = shoeViewNavigationService;
             _shoeListViewNavigationService = shoeListViewNavigationService;
-            //_shoeListViewNavigationService = shoeListViewNavigationService;
-            OnPropertyChanged("Shoes");
             _shoes = new ObservableCollection<ShoeViewModel>();
-            GetAllShoes();
 
-            _view = (ListCollectionView)CollectionViewSource.GetDefaultView(Shoes);
+            OnPropertyChanged("Shoes");
+            GetAllShoes();
+            View = (ListCollectionView)CollectionViewSource.GetDefaultView(Shoes);
+
             _addNewShoeCommand = new NavigateCommand(shoeViewNavigationService);
             _deleteShoeCommand = new DeleteShoeCommand(this, provider);
+            _filterDataCommand = new FilterShoesCommand(this);
         }
 
         private void GetAllShoes()
@@ -66,20 +65,6 @@ namespace Grzymska.EpicFootwear.UI.ViewModels
         { 
             get => _filterDataCommand; 
         }
-
-        private void FilterData()
-        {
-            if (string.IsNullOrEmpty(FilterValue))
-            {
-                _view.Filter = null;
-            }
-            else
-            {
-                _view.Filter = (c) => ((ShoeViewModel)c).Name.Contains(FilterValue);
-            }
-        }
-
-       
 
 
         private CommandBase _addNewShoeCommand;
