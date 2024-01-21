@@ -9,7 +9,7 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto" />
-            <RowDefinition Height="auto" />
+            <RowDefinition Height="220" />
             <RowDefinition Height="auto" />
         </Grid.RowDefinitions>
 
@@ -36,7 +36,7 @@
                 Command="{Binding FilterDataCommand}"/>
         </Grid>
 
-        <ListView Grid.Row="1" Margin="0 15 0 0" ItemsSource="{Binding Shoes}">
+        <ListView ItemsSource="{Binding Shoes}" Grid.Row="1" Margin="0 10 0 0" MaxHeight="220">
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">
                     <Setter Property="HorizontalContentAlignment" Value="Stretch" />
@@ -47,7 +47,7 @@
                     <GridViewColumn Header="ID" >
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBlock HorizontalAlignment="Center" Text="{Binding ID}" Padding="0 0 20 0"/>
+                                <TextBlock HorizontalAlignment="Center" Text="{Binding ID}" Padding="20 0"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
@@ -55,7 +55,7 @@
                     <GridViewColumn Header="Model Name">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBlock HorizontalAlignment="Center" Text="{Binding Name}" Padding="0 0 20 0" />
+                                <TextBlock HorizontalAlignment="Center" Text="{Binding Name}" Padding="20 0" />
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
@@ -63,7 +63,7 @@
                     <GridViewColumn Header="Brand">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBlock HorizontalAlignment="Center" Text="{Binding Brand.Name}" Padding="0 0 20 0" />
+                                <TextBlock HorizontalAlignment="Center" Text="{Binding Brand.Name}" Padding="20 0" />
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
@@ -71,15 +71,15 @@
                     <GridViewColumn Header="Type">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBlock HorizontalAlignment="Center" Text="{Binding ShoeType}" Padding="0 0 20 0" />
+                                <TextBlock HorizontalAlignment="Center" Text="{Binding ShoeType}" Padding="20 0" />
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
 
                     <GridViewColumn>
-                        <GridViewColumn.CellTemplate>
+                        <GridViewColumn.CellTemplate >
                             <DataTemplate>
-                                <Button Content="Edit" Background="#fce865"/>
+                                <Button Content="Edit" Background="#fce865" Margin="70 0 0 0"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
@@ -96,13 +96,13 @@
         </ListView>
 
         <Button
-            Grid.Row="2"
-            Margin="0 15 0 0"
-            Content="Add shoes"
-            VerticalAlignment="Bottom"
-            HorizontalAlignment="Left"
-            Background="#7aba56"
-            Command="{Binding AddNewShoeCommand}"/>
+        Grid.Row="2"
+        Margin="0 15 0 0"
+        Content="Add shoes"
+        VerticalAlignment="Bottom"
+        HorizontalAlignment="Left"
+        Background="#7aba56"
+        Command="{Binding AddNewShoeCommand}"/>
 
     </Grid>
 </UserControl>

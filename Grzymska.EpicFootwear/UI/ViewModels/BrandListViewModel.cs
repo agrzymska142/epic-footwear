@@ -1,5 +1,6 @@
 ﻿using Grzymska.EpicFootwear.BLC;
 using Grzymska.EpicFootwear.Interfaces;
+using Grzymska.EpicFootwear.UI.Commands;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -19,26 +20,29 @@ namespace Grzymska.EpicFootwear.UI.ViewModels
 
         private DataProvider _provider;
 
+        private NavigationService _brandViewNavigationService;
 
-        public BrandListViewModel()
+
+        public BrandListViewModel(DataProvider provider, NavigationService brandViewNavigationService)
         {
-            _provider = App.Provider;
+            _provider = provider;
             _brands = new ObservableCollection<BrandViewModel>();
             OnPropertyChanged("Brands");
             GetAllBrands();
+            _brandViewNavigationService = brandViewNavigationService;
 
             _view = (ListCollectionView)CollectionViewSource.GetDefaultView(Brands);
-            _filterDataCommand = new RelayCommand(param => FilterData());
-            //_addNewBrandCommand = new RelayCommand(param => { Add})
-            _editBrandCommand = new RelayCommand(param => EditBrand());
-            _deleteBrandCommand = new RelayCommand(param => DeleteBrand());
+            //_filterDataCommand = new CommandBase(param => FilterData());
+            _addNewBrandCommand = new NavigateCommand(brandViewNavigationService);
+            //_editBrandCommand = new CommandBase(param => EditBrand());
+            //_deleteBrandCommand = new CommandBase(param => DeleteBrand());
         }
 
         private void GetAllBrands()
         {
             foreach (var brand in _provider.GetAllBrands())
             {
-                _brands.Add(new BrandViewModel(brand));
+                _brands.Add(new BrandViewModel(brand, _provider, _brandViewNavigationService));
             }
         }
 
@@ -55,8 +59,8 @@ namespace Grzymska.EpicFootwear.UI.ViewModels
 
         public string FilterValue { get; set; }
      
-        private RelayCommand _filterDataCommand;
-        public RelayCommand FilterDataCommand { get => _filterDataCommand; }
+        private CommandBase _filterDataCommand;
+        public CommandBase FilterDataCommand { get => _filterDataCommand; }
         private void FilterData()
         {
             if (string.IsNullOrEmpty(FilterValue))
@@ -69,19 +73,19 @@ namespace Grzymska.EpicFootwear.UI.ViewModels
             }
         }
 
-        private RelayCommand _addNewBrandCommand;
-        public RelayCommand AddNewBrandCommand
+        private CommandBase _addNewBrandCommand;
+        public CommandBase AddNewBrandCommand
         {
             get => _addNewBrandCommand;
         }
         private void AddNewBrand()
         {
-            SelectedBrand = new BrandViewModel(_provider.NewBrand());
+            SelectedBrand = new BrandViewModel(_provider.NewBrand(), _provider, _brandViewNavigationService);
             SelectedBrand.Validate();
         }
 
-        private RelayCommand _editBrandCommand;
-        public RelayCommand EditBrandCommand
+        private CommandBase _editBrandCommand;
+        public CommandBase EditBrandCommand
         {
             get => _editBrandCommand;
         }
@@ -90,8 +94,8 @@ namespace Grzymska.EpicFootwear.UI.ViewModels
             // TODO: otwórz okno dodawania przekazując selectedBrand
         }
 
-        private RelayCommand _deleteBrandCommand;
-        public RelayCommand DeleteBrandsCommand
+        private CommandBase _deleteBrandCommand;
+        public CommandBase DeleteBrandsCommand
         {
             get => _deleteBrandCommand;
         }

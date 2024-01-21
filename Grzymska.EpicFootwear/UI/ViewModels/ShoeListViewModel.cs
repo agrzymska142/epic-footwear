@@ -9,6 +9,7 @@ using System.Windows.Data;
 using Grzymska.EpicFootwear.BLC;
 using Grzymska.EpicFootwear.DAOMock;
 using Grzymska.EpicFootwear.Interfaces;
+using Grzymska.EpicFootwear.UI.Commands;
 
 namespace Grzymska.EpicFootwear.UI.ViewModels
 {
@@ -19,31 +20,33 @@ namespace Grzymska.EpicFootwear.UI.ViewModels
 
         private ListCollectionView _view;
 
-        private RelayCommand _filterDataCommand;
-        public RelayCommand FilterDataCommand { get => _filterDataCommand; }
+        private CommandBase _filterDataCommand;
+        public CommandBase FilterDataCommand { get => _filterDataCommand; }
 
         private DataProvider _provider;
+        private NavigationService _navigationService;
 
         public string FilterValue { get; set; }
 
-        public ShoeListViewModel()
+        public ShoeListViewModel(DataProvider provider, NavigationService navigationService)
         {
-            _provider = App.Provider;
+            _provider = provider;
+            _navigationService = navigationService;
             OnPropertyChanged("Shoes");
             _shoes = new ObservableCollection<ShoeViewModel>();
             GetAllShoes();
 
             _view = (ListCollectionView)CollectionViewSource.GetDefaultView(Shoes);
-            _filterDataCommand = new RelayCommand(param => FilterData());
-            //_addNewShoeCommand = new RelayCommand(param => { Add})
-            _deleteShoeCommand = new RelayCommand(param => DeleteShoe());
+            _addNewShoeCommand = new NavigateCommand(navigationService);
+            //_filterDataCommand = new CommandBase(param => FilterData());
+            //_deleteShoeCommand = new CommandBase(param => DeleteShoe());
         }
 
         private void GetAllShoes()
         {
             foreach (var shoe in _provider.GetAllShoes())
             {
-                _shoes.Add(new ShoeViewModel(shoe));
+                _shoes.Add(new ShoeViewModel(shoe, _provider, _navigationService));
             }
         }
 
@@ -70,19 +73,19 @@ namespace Grzymska.EpicFootwear.UI.ViewModels
             }
         }
 
-        private RelayCommand _addNewShoeCommand;
-        public RelayCommand AddNewShoesCommand
+        private CommandBase _addNewShoeCommand;
+        public CommandBase AddNewShoeCommand
         {
             get => _addNewShoeCommand;
         }
         private void AddNewShoe()
         {
-            SelectedShoe = new ShoeViewModel(_provider.NewShoe());
+            SelectedShoe = new ShoeViewModel(_provider.NewShoe(), _provider, _navigationService);
             SelectedShoe.Validate();
         }
 
-        private RelayCommand _deleteShoeCommand;
-        public RelayCommand DeleteShoesCommand
+        private CommandBase _deleteShoeCommand;
+        public CommandBase DeleteShoesCommand
         {
             get => _deleteShoeCommand;
         }

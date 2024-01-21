@@ -61,5 +61,7 @@ namespace Grzymska.EpicFootwear.UI.ViewModels
             if (ErrorsChanged != null)
                 ErrorsChanged(this, new DataErrorsChangedEventArgs(propertyName));
         }
+
+        public virtual void Dispose() { }
     }
 }

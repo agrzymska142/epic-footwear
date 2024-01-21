@@ -47,7 +47,7 @@
                     <GridViewColumn Header="ID" >
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBlock HorizontalAlignment="Center" Padding="0 0 20 0" Text="{Binding ID}"/>
+                                <TextBlock HorizontalAlignment="Center" Padding="20 0" Text="{Binding ID}"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
@@ -55,7 +55,7 @@
                     <GridViewColumn Header="Name">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBlock HorizontalAlignment="Center" Text="{Binding Name}" Padding="0 0 20 0" />
+                                <TextBlock HorizontalAlignment="Center" Text="{Binding Name}" Padding="20 0" />
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
@@ -63,7 +63,7 @@
                     <GridViewColumn Header="Country">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBlock HorizontalAlignment="Center" Text="{Binding Country}" Padding="0 0 20 0" />
+                                <TextBlock HorizontalAlignment="Center" Text="{Binding Country}" Padding="20 0" />
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
@@ -71,7 +71,7 @@
                     <GridViewColumn Header="Founded in">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBlock HorizontalAlignment="Center" Text="{Binding Founded}" Padding="0 0 20 0" />
+                                <TextBlock HorizontalAlignment="Center" Text="{Binding Founded}" Padding="20 0" />
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
@@ -79,7 +79,7 @@
                     <GridViewColumn>
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <Button Content="Edit" Background="#fce865" Command="{Binding EditBrandCommand}"/>
+                                <Button Content="Edit" Background="#fce865" Command="{Binding EditBrandCommand}" Margin="80 0 0 0"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>

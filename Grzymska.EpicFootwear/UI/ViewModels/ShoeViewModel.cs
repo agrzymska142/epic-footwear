@@ -1,6 +1,7 @@
 ﻿using Grzymska.EpicFootwear.BLC;
 using Grzymska.EpicFootwear.Core;
 using Grzymska.EpicFootwear.Interfaces;
+using Grzymska.EpicFootwear.UI.Commands;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -8,6 +9,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Navigation;
 
 namespace Grzymska.EpicFootwear.UI.ViewModels
 {
@@ -24,26 +26,26 @@ namespace Grzymska.EpicFootwear.UI.ViewModels
 
         private DataProvider _provider;
 
-        public ShoeViewModel(IShoe shoe)
+        public ShoeViewModel(IShoe shoe, DataProvider provider, NavigationService shoeListViewNavigationService)
         {
             _shoe = shoe;
-            _provider = App.Provider;
+            _provider = provider;
             _shoeTypes = new ObservableCollection<ShoeType>((IEnumerable<ShoeType>)Enum.GetValues(typeof(ShoeType)));
             GetAllBrands();
 
-            _saveShoeCommand = new RelayCommand(param => SaveShoe());
-            //cancel command
+            _saveShoeCommand = new SubmitShoeCommand(this, provider, shoeListViewNavigationService);
+            _cancelCommand = new NavigateCommand(shoeListViewNavigationService);
         }
 
-        public ShoeViewModel()
+        public ShoeViewModel(DataProvider provider, NavigationService shoeListViewNavigationService)
         {
-            _provider = App.Provider;
+            _provider = provider;
             _shoe = _provider.NewShoe();
             _shoeTypes = new ObservableCollection<ShoeType>((IEnumerable<ShoeType>)Enum.GetValues(typeof(ShoeType)));
             GetAllBrands();
 
-            _saveShoeCommand = new RelayCommand(param => SaveShoe());
-            //cancel command
+            _saveShoeCommand = new SubmitShoeCommand(this, provider, shoeListViewNavigationService);
+            _cancelCommand = new NavigateCommand(shoeListViewNavigationService);
         }
 
         private void GetAllBrands()
@@ -98,8 +100,8 @@ namespace Grzymska.EpicFootwear.UI.ViewModels
             }
         }
 
-        private RelayCommand _saveShoeCommand;
-        public RelayCommand SaveShoeCommand
+        private CommandBase _saveShoeCommand;
+        public CommandBase SaveShoeCommand
         {
             get => _saveShoeCommand;
         }
@@ -108,9 +110,11 @@ namespace Grzymska.EpicFootwear.UI.ViewModels
             _provider.SaveShoe(Shoe);
         }
 
-        private RelayCommand _cancelCommand;
-        //TODO
-        public RelayCommand CancelCommand;
+        private CommandBase _cancelCommand;
+        public CommandBase CancelCommand
+        {
+            get => _cancelCommand;
+        }
 
         public void Validate()
         {

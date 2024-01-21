@@ -1,6 +1,7 @@
 ﻿using Grzymska.EpicFootwear.BLC;
 using Grzymska.EpicFootwear.DAOMock;
 using Grzymska.EpicFootwear.Interfaces;
+using Grzymska.EpicFootwear.UI.Commands;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -17,20 +18,23 @@ namespace Grzymska.EpicFootwear.UI.ViewModels
 
         private DataProvider _provider;
 
-        public BrandViewModel(IBrand brand)
+        public BrandViewModel(IBrand brand, DataProvider provider, NavigationService brandListNavigationService)
         {
-            _provider = App.Provider;
+            _provider = provider;
             _brand = brand;
 
-            _saveBrandCommand = new RelayCommand(param => SaveBrand());
-            // cancel command
+            _saveBrandCommand = new SubmitBrandCommand(this, provider);
+            _cancelCommand = new NavigateCommand(brandListNavigationService);
         }
 
         // raczej do usunięcia później
-        public BrandViewModel()
+        public BrandViewModel(DataProvider provider, NavigationService brandListNavigationService)
         {
-            _provider = App.Provider; ;
+            _provider = provider;
             _brand = _provider.NewBrand();
+
+            _saveBrandCommand = new SubmitBrandCommand(this, provider);
+            _cancelCommand = new NavigateCommand(brandListNavigationService);
         }
 
         public int ID
@@ -80,19 +84,17 @@ namespace Grzymska.EpicFootwear.UI.ViewModels
             }
         }
 
-        private RelayCommand _saveBrandCommand;
-        public RelayCommand SaveBrandCommand
+        private CommandBase _saveBrandCommand;
+        public CommandBase SaveBrandCommand
         {
             get => _saveBrandCommand;
         }
-        private void SaveBrand()
-        {
-            _provider.SaveBrand(Brand);
-        }
 
-        private RelayCommand _cancelCommand;
-        // TODO
-        public RelayCommand CancelCommand;
+        private CommandBase _cancelCommand;
+        public CommandBase CancelCommand
+        {
+            get => _cancelCommand;
+        }
 
         public void Validate()
         {
