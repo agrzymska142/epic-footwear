@@ -3,6 +3,7 @@ using Grzymska.EpicFootwear.Interfaces;
 using Grzymska.EpicFootwear.UI.ViewModels;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;

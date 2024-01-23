@@ -52,8 +52,8 @@ namespace Grzymska.EpicFootwear.UI.ViewModels
 
         private void GetAllBrands()
         {
-            List<IBrand> listBrands = (List<IBrand>)_provider.GetAllBrands();
-            _brands = new ObservableCollection<IBrand>(listBrands);
+            IEnumerable<IBrand> brands = _provider.GetAllBrands();
+            _brands = new ObservableCollection<IBrand>(brands);
         }
 
         public int ID

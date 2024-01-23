@@ -26,7 +26,7 @@ namespace Grzymska.EpicFootwear.UI.Commands
             }
             else
             {
-                _shoeListViewModel.View.Filter = (c) => ((ShoeViewModel)c).Name.Contains(_shoeListViewModel.FilterValue);
+                _shoeListViewModel.View.Filter = (c) => ((ShoeViewModel)c).Name.ToLower().Contains(_shoeListViewModel.FilterValue.ToLower());
             }
         }
     }
