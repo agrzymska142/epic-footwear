@@ -1,11 +1,67 @@
 {
   "Version": 1,
-  "Hash": "y0ZZYy8vflRMpA0mLMF7n66lyPCuWXIPM5DEuWWkChw=",
+  "Hash": "U5fhKXPUE2As/Z8XYLIKl56uxKeQovvFXO8T5gW0vGs=",
   "Source": "WEB",
   "BasePath": "_content/WEB",
   "Mode": "Default",
   "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "D:\\Studia\\Semestr VII\\Programowanie Wizualne\\epic-footwear\\Grzymska.EpicFootwear\\BLC\\BLC.csproj",
+      "Version": 2,
+      "Source": "BLC",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
+    },
+    {
+      "Identity": "D:\\Studia\\Semestr VII\\Programowanie Wizualne\\epic-footwear\\Grzymska.EpicFootwear\\Core\\Core.csproj",
+      "Version": 2,
+      "Source": "Core",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
+    },
+    {
+      "Identity": "D:\\Studia\\Semestr VII\\Programowanie Wizualne\\epic-footwear\\Grzymska.EpicFootwear\\DAOMock\\DAOMock.csproj",
+      "Version": 2,
+      "Source": "DAOMock",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
+    },
+    {
+      "Identity": "D:\\Studia\\Semestr VII\\Programowanie Wizualne\\epic-footwear\\Grzymska.EpicFootwear\\DAOSQL\\DAOSQL.csproj",
+      "Version": 2,
+      "Source": "DAOSQL",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
+    },
+    {
+      "Identity": "D:\\Studia\\Semestr VII\\Programowanie Wizualne\\epic-footwear\\Grzymska.EpicFootwear\\INTERFACES\\Interfaces.csproj",
+      "Version": 2,
+      "Source": "Interfaces",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
+    }
+  ],
   "DiscoveryPatterns": [
     {
       "Name": "WEB\\wwwroot",
@@ -129,6 +185,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.png"
+    },
+    {
+      "Identity": "D:\\Studia\\Semestr VII\\Programowanie Wizualne\\epic-footwear\\Grzymska.EpicFootwear\\WEB\\wwwroot\\logo.png",
+      "SourceId": "WEB",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Studia\\Semestr VII\\Programowanie Wizualne\\epic-footwear\\Grzymska.EpicFootwear\\WEB\\wwwroot\\",
+      "BasePath": "_content/WEB",
+      "RelativePath": "logo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\logo.png"
     }
   ]
 }

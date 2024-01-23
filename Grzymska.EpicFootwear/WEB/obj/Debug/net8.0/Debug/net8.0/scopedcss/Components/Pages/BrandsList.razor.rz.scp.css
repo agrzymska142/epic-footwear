@@ -1,0 +1,65 @@
+.container[b-b2oksc089p] {
+    width: 100%;
+    margin-top: 70px;
+}
+
+.header[b-b2oksc089p] {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.search-bar[b-b2oksc089p] {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Align items to the right */
+    margin-bottom: 10px; /* Adjust the bottom margin as needed */
+}
+
+.filter-button[b-b2oksc089p] {
+    background-color: #7aba56;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.brand-list[b-b2oksc089p] {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+table[b-b2oksc089p] {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th[b-b2oksc089p], td[b-b2oksc089p] {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+th[b-b2oksc089p] {
+    background-color: #f2f2f2;
+}
+
+.edit-button[b-b2oksc089p], .delete-button[b-b2oksc089p] {
+    background-color: #fce865;
+    border: none;
+    color: black;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.delete-button[b-b2oksc089p] {
+    background-color: #ff7438;
+}
+
+.add-button[b-b2oksc089p] {
+    margin-top: 20px;
+    background-color: #7aba56;
+    border: none;
+    color: white;
+    cursor: pointer;
+}

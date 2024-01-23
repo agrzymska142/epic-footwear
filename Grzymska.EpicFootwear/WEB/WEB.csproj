@@ -1,9 +1,18 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <BaseOutputPath>D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear\WEB\bin\Debug\net8.0\runtimes</BaseOutputPath>
+    <BaseIntermediateOutputPath>D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear\WEB\obj\Debug\net8.0</BaseIntermediateOutputPath>
+    <RootNamespace>Grzymska.EpicFootwear.WEB</RootNamespace>
   </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BLC\BLC.csproj" />
+    <ProjectReference Include="..\DAOMock\DAOMock.csproj" />
+    <ProjectReference Include="..\DAOSQL\DAOSQL.csproj" />
+  </ItemGroup>
 
 </Project>

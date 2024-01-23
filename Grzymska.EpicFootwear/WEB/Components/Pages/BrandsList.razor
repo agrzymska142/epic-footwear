@@ -1,0 +1,65 @@
+﻿@page "/brands"
+@using Grzymska.EpicFootwear.Interfaces
+@using Grzymska.EpicFootwear.WEB.Models
+
+@inject HttpClient httpClient
+@inject NavigationManager NavigationManager
+@rendermode InteractiveServer
+
+@if (Brands == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <div class="container">
+        <div class="header">
+            <h2>List of saved brands</h2>
+        </div>
+
+        <div class="search-bar">
+            <input class="filter-input" />
+            <button class="filter-button">Search</button>
+        </div>
+
+        <div class="brand-list">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Brand Name</th>
+                        <th>Country</th>
+                        <th>Founded in</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var brand in Brands)
+                    {
+                        <tr>
+                            <td>@brand.ID</td>
+                            <td>@brand.Name</td>
+                            <td>@brand.Country</td>
+                            <td>@brand.Founded</td>
+                            <td><button class="edit-button">Edit</button></td>
+                            <td><button class="delete-button">Delete</button></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <button class="add-button" @onclick='() => NavigationManager.NavigateTo("/brands/add")'>Add brand</button>
+    </div>
+}
+
+@code {
+    private IEnumerable<Brand> Brands;
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        Brands = await httpClient.GetFromJsonAsync<IEnumerable<Brand>>("https://localhost:7209/api/brands");
+    }
+}

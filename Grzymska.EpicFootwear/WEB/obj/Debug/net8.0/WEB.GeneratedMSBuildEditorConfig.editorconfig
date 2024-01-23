@@ -53,3 +53,11 @@ build_metadata.AdditionalFiles.CssScope = b-ihld8ivar3
 [D:/Studia/Semestr VII/Programowanie Wizualne/epic-footwear/Grzymska.EpicFootwear/WEB/Components/Layout/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTmF2TWVudS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-52vz10t17v
+
+[D:/Studia/Semestr VII/Programowanie Wizualne/epic-footwear/Grzymska.EpicFootwear/WEB/Components/Pages/AddBrand.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBZGRCcmFuZC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-2saa0676of
+
+[D:/Studia/Semestr VII/Programowanie Wizualne/epic-footwear/Grzymska.EpicFootwear/WEB/Components/Pages/AddShoes.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBZGRTaG9lcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-p1ig5myb0t
