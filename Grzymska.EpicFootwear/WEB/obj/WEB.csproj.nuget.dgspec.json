@@ -39,8 +39,8 @@
               "D:\\Studia\\Semestr VII\\Programowanie Wizualne\\epic-footwear\\Grzymska.EpicFootwear\\DAOSQL\\DAOSQL.csproj": {
                 "projectPath": "D:\\Studia\\Semestr VII\\Programowanie Wizualne\\epic-footwear\\Grzymska.EpicFootwear\\DAOSQL\\DAOSQL.csproj"
               },
-              "D:\\Studia\\Semestr VII\\Programowanie Wizualne\\epic-footwear\\Grzymska.EpicFootwear\\INTERFACES\\Interfaces.csproj": {
-                "projectPath": "D:\\Studia\\Semestr VII\\Programowanie Wizualne\\epic-footwear\\Grzymska.EpicFootwear\\INTERFACES\\Interfaces.csproj"
+              "D:\\Studia\\Semestr VII\\Programowanie Wizualne\\epic-footwear\\Grzymska.EpicFootwear\\Interfaces\\Interfaces.csproj": {
+                "projectPath": "D:\\Studia\\Semestr VII\\Programowanie Wizualne\\epic-footwear\\Grzymska.EpicFootwear\\Interfaces\\Interfaces.csproj"
               }
             }
           }
@@ -66,9 +66,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
@@ -129,9 +126,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
@@ -169,8 +163,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Studia\\Semestr VII\\Programowanie Wizualne\\epic-footwear\\Grzymska.EpicFootwear\\INTERFACES\\Interfaces.csproj": {
-                "projectPath": "D:\\Studia\\Semestr VII\\Programowanie Wizualne\\epic-footwear\\Grzymska.EpicFootwear\\INTERFACES\\Interfaces.csproj"
+              "D:\\Studia\\Semestr VII\\Programowanie Wizualne\\epic-footwear\\Grzymska.EpicFootwear\\Interfaces\\Interfaces.csproj": {
+                "projectPath": "D:\\Studia\\Semestr VII\\Programowanie Wizualne\\epic-footwear\\Grzymska.EpicFootwear\\Interfaces\\Interfaces.csproj"
               }
             }
           }
@@ -196,9 +190,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
@@ -236,8 +227,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Studia\\Semestr VII\\Programowanie Wizualne\\epic-footwear\\Grzymska.EpicFootwear\\INTERFACES\\Interfaces.csproj": {
-                "projectPath": "D:\\Studia\\Semestr VII\\Programowanie Wizualne\\epic-footwear\\Grzymska.EpicFootwear\\INTERFACES\\Interfaces.csproj"
+              "D:\\Studia\\Semestr VII\\Programowanie Wizualne\\epic-footwear\\Grzymska.EpicFootwear\\Interfaces\\Interfaces.csproj": {
+                "projectPath": "D:\\Studia\\Semestr VII\\Programowanie Wizualne\\epic-footwear\\Grzymska.EpicFootwear\\Interfaces\\Interfaces.csproj"
               }
             }
           }
@@ -252,6 +243,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
@@ -281,9 +276,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
@@ -292,14 +284,14 @@
         }
       }
     },
-    "D:\\Studia\\Semestr VII\\Programowanie Wizualne\\epic-footwear\\Grzymska.EpicFootwear\\INTERFACES\\Interfaces.csproj": {
+    "D:\\Studia\\Semestr VII\\Programowanie Wizualne\\epic-footwear\\Grzymska.EpicFootwear\\Interfaces\\Interfaces.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Studia\\Semestr VII\\Programowanie Wizualne\\epic-footwear\\Grzymska.EpicFootwear\\INTERFACES\\Interfaces.csproj",
+        "projectUniqueName": "D:\\Studia\\Semestr VII\\Programowanie Wizualne\\epic-footwear\\Grzymska.EpicFootwear\\Interfaces\\Interfaces.csproj",
         "projectName": "Interfaces",
-        "projectPath": "D:\\Studia\\Semestr VII\\Programowanie Wizualne\\epic-footwear\\Grzymska.EpicFootwear\\INTERFACES\\Interfaces.csproj",
+        "projectPath": "D:\\Studia\\Semestr VII\\Programowanie Wizualne\\epic-footwear\\Grzymska.EpicFootwear\\Interfaces\\Interfaces.csproj",
         "packagesPath": "C:\\Users\\Agnieszka\\.nuget\\packages\\",
-        "outputPath": "D:\\Studia\\Semestr VII\\Programowanie Wizualne\\epic-footwear\\Grzymska.EpicFootwear\\INTERFACES\\obj\\",
+        "outputPath": "D:\\Studia\\Semestr VII\\Programowanie Wizualne\\epic-footwear\\Grzymska.EpicFootwear\\Interfaces\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Programowanie\\IDE\\Visual Studio\\Shared\\NuGetPackages"
@@ -348,9 +340,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
@@ -390,12 +379,6 @@
             "projectReferences": {
               "D:\\Studia\\Semestr VII\\Programowanie Wizualne\\epic-footwear\\Grzymska.EpicFootwear\\BLC\\BLC.csproj": {
                 "projectPath": "D:\\Studia\\Semestr VII\\Programowanie Wizualne\\epic-footwear\\Grzymska.EpicFootwear\\BLC\\BLC.csproj"
-              },
-              "D:\\Studia\\Semestr VII\\Programowanie Wizualne\\epic-footwear\\Grzymska.EpicFootwear\\DAOMock\\DAOMock.csproj": {
-                "projectPath": "D:\\Studia\\Semestr VII\\Programowanie Wizualne\\epic-footwear\\Grzymska.EpicFootwear\\DAOMock\\DAOMock.csproj"
-              },
-              "D:\\Studia\\Semestr VII\\Programowanie Wizualne\\epic-footwear\\Grzymska.EpicFootwear\\DAOSQL\\DAOSQL.csproj": {
-                "projectPath": "D:\\Studia\\Semestr VII\\Programowanie Wizualne\\epic-footwear\\Grzymska.EpicFootwear\\DAOSQL\\DAOSQL.csproj"
               }
             }
           }

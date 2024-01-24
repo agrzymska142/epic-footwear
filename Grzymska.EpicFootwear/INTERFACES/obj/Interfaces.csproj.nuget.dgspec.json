@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Studia\\Semestr VII\\Programowanie Wizualne\\epic-footwear\\Grzymska.EpicFootwear\\INTERFACES\\Interfaces.csproj": {}
+    "D:\\Studia\\Semestr VII\\Programowanie Wizualne\\epic-footwear\\Grzymska.EpicFootwear\\Interfaces\\Interfaces.csproj": {}
   },
   "projects": {
     "D:\\Studia\\Semestr VII\\Programowanie Wizualne\\epic-footwear\\Grzymska.EpicFootwear\\Core\\Core.csproj": {
@@ -56,9 +56,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
@@ -67,14 +64,14 @@
         }
       }
     },
-    "D:\\Studia\\Semestr VII\\Programowanie Wizualne\\epic-footwear\\Grzymska.EpicFootwear\\INTERFACES\\Interfaces.csproj": {
+    "D:\\Studia\\Semestr VII\\Programowanie Wizualne\\epic-footwear\\Grzymska.EpicFootwear\\Interfaces\\Interfaces.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Studia\\Semestr VII\\Programowanie Wizualne\\epic-footwear\\Grzymska.EpicFootwear\\INTERFACES\\Interfaces.csproj",
+        "projectUniqueName": "D:\\Studia\\Semestr VII\\Programowanie Wizualne\\epic-footwear\\Grzymska.EpicFootwear\\Interfaces\\Interfaces.csproj",
         "projectName": "Interfaces",
-        "projectPath": "D:\\Studia\\Semestr VII\\Programowanie Wizualne\\epic-footwear\\Grzymska.EpicFootwear\\INTERFACES\\Interfaces.csproj",
+        "projectPath": "D:\\Studia\\Semestr VII\\Programowanie Wizualne\\epic-footwear\\Grzymska.EpicFootwear\\Interfaces\\Interfaces.csproj",
         "packagesPath": "C:\\Users\\Agnieszka\\.nuget\\packages\\",
-        "outputPath": "D:\\Studia\\Semestr VII\\Programowanie Wizualne\\epic-footwear\\Grzymska.EpicFootwear\\INTERFACES\\obj\\",
+        "outputPath": "D:\\Studia\\Semestr VII\\Programowanie Wizualne\\epic-footwear\\Grzymska.EpicFootwear\\Interfaces\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Programowanie\\IDE\\Visual Studio\\Shared\\NuGetPackages"
@@ -123,9 +120,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

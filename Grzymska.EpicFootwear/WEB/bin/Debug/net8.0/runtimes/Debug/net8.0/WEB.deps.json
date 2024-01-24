@@ -8,9 +8,7 @@
     ".NETCoreApp,Version=v8.0": {
       "WEB/1.0.0": {
         "dependencies": {
-          "BLC": "1.0.0",
-          "DAOMock": "1.0.0",
-          "DAOSQL": "1.0.0"
+          "BLC": "1.0.0"
         },
         "runtime": {
           "WEB.dll": {}
@@ -308,6 +306,7 @@
       "DAOSQL/1.0.0": {
         "dependencies": {
           "Interfaces": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "8.0.1",
           "Microsoft.EntityFrameworkCore.Sqlite": "8.0.1"
         },
         "runtime": {

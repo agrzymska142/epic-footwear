@@ -7,8 +7,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Data;
 using Grzymska.EpicFootwear.BLC;
-using Grzymska.EpicFootwear.DAOMock;
-using Grzymska.EpicFootwear.Interfaces;
 using Grzymska.EpicFootwear.UI.Commands;
 
 namespace Grzymska.EpicFootwear.UI.ViewModels
