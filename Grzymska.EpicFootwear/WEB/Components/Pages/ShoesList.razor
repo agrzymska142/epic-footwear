@@ -18,8 +18,8 @@ else
         </div>
 
         <div class="search-bar">
-            <input class="filter-input" />
-            <button class="filter-button">Search</button>
+            <input class="filter-input" @bind="filterString" />
+            <button class="filter-button" @onclick="FilterShoes">Search</button>
         </div>
 
         <div class="brand-list">
@@ -35,38 +35,58 @@ else
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach (var shoe in Shoes)
+                    @foreach (var shoe in FilteredShoes)
                     {
                         <tr>
                             <td>@shoe.ID</td>
                             <td>@shoe.Name</td>
                             <td>@shoe.Brand.Name</td>
                             <td>@shoe.ShoeType.ToString()</td>
-                            <td><button class="edit-button">Edit</button></td>
-                            <td><button class="delete-button">Delete</button></td>
+                            <td><button class="edit-button" @onclick='() => NavigationManager.NavigateTo($"/shoes/edit/{shoe.ID}")'>Edit</button></td>
+                            <td><button class="delete-button" @onclick="() => DeleteShoe(shoe.ID)">Delete</button></td>
                         </tr>
                     }
                 </tbody>
             </table>
         </div>
 
-        <button class="add-button" @onclick='() => NavigationManager.NavigateTo("/shoes/add")'>Add brand</button>
+        <button class="add-button" @onclick='() => NavigationManager.NavigateTo("/shoes/add")'>Add shoes</button>
     </div>
 }
 
 @code {
     private IEnumerable<Shoe> Shoes;
+    private IEnumerable<Shoe> FilteredShoes;
+    private string filterString = string.Empty;
+
 
     private async Task GetShoes()
     {
         Shoes = await httpClient.GetFromJsonAsync<IEnumerable<Shoe>>("https://localhost:7209/api/shoes");
+        FilterShoes();
+    }
+
+    private void FilterShoes()
+    {
+        if (string.IsNullOrWhiteSpace(filterString))
+        {
+            FilteredShoes = Shoes;
+        }
+        else
+        {
+            FilteredShoes = Shoes.Where(shoe => shoe.Name.Contains(filterString, StringComparison.OrdinalIgnoreCase));
+        }
     }
 
     protected override async Task OnInitializedAsync()
     {
         await GetShoes();
+        FilterShoes();
+    } 
+
+    private async Task DeleteShoe(int id)
+    {
+        await httpClient.DeleteAsync($"https://localhost:7209/api/shoes/{id}");
+        await GetShoes();
     }
-
-
-
 }

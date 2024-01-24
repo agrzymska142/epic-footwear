@@ -38,6 +38,14 @@ namespace WEB.Controllers
             return Ok(brand);
         }
 
+        [HttpGet("new")]
+        public ActionResult<Brand> GetNewBrand()
+        {
+            var brand = _dataProvider.NewBrand();
+
+            return Ok(brand);
+        }
+
         [HttpPost]
         public ActionResult<string> SaveBrand([FromBody] Brand newBrand)
         {

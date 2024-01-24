@@ -38,6 +38,14 @@ namespace WEB.Controllers
             return Ok(shoe);
         }
 
+        [HttpGet("new")]
+        public ActionResult<Shoe> GetNewShoe()
+        {
+            var shoe = _dataProvider.NewShoe();
+
+            return Ok(shoe);
+        }
+
         [HttpPost]
         public ActionResult<string> SaveShoe([FromBody] Shoe newShoe)
         {
