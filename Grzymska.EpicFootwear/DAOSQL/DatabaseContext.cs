@@ -18,18 +18,37 @@ namespace Grzymska.EpicFootwear.DAOSQL
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             string databasePath = GetDatabasePath();
-
-            optionsBuilder.UseSqlite($"Data source={databasePath}");
+            try
+            {
+                optionsBuilder.UseSqlite($"Data source={databasePath}");
+            }
+            catch(Exception ex)
+            {
+                throw new Exception(ex.Message + $"\nPath to database file: {databasePath}");
+            }
         }
 
         private string GetDatabasePath()
         {
-            string workingDirectory = Environment.CurrentDirectory;
-            string projectDirectory = Directory.GetParent(workingDirectory).Parent.Parent.Parent.FullName;
-            string relativePathToDatabase = "DAOSQL\\catalog.db";
+            string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
+            string projectName = "Grzymska.EpicFootwear";
 
-            return Path.Combine(projectDirectory, relativePathToDatabase);
+            int lastIndex = baseDirectory.LastIndexOf(projectName);
+
+            if (lastIndex != -1)
+            {
+                string projectPath = baseDirectory.Substring(0, lastIndex + projectName.Length);
+
+                string relativePathToDatabase = "DAOSQL\\catalog.db";
+                return Path.Combine(projectPath, relativePathToDatabase);
+            }
+            else
+            {
+                throw new InvalidOperationException("Project name not found in the base directory path.");
+            }
         }
+
+
 
 
         public DbSet<Brand> Brands { get; set; }

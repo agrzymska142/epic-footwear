@@ -8,7 +8,12 @@ namespace Grzymska.EpicFootwear.WEB.Models
         public int ID { get; set; }
         public string Name { get; set; }
         public Brand Brand { get; set; }
+        IBrand IShoe.Brand
+        {
+            get => Brand;
+            set => Brand = (Brand)value;
+        }
         public ShoeType ShoeType { get; set; }
-        IBrand IShoe.Brand { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
     }
 }
+    

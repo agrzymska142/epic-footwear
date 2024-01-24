@@ -57,9 +57,16 @@ else
 @code {
     private IEnumerable<Shoe> Shoes;
 
-
-    protected override async Task OnInitializedAsync()
+    private async Task GetShoes()
     {
         Shoes = await httpClient.GetFromJsonAsync<IEnumerable<Shoe>>("https://localhost:7209/api/shoes");
     }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await GetShoes();
+    }
+
+
+
 }

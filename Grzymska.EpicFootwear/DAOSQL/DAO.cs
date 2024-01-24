@@ -26,7 +26,7 @@ namespace Grzymska.EpicFootwear.DAOSQL
 
         public IEnumerable<IShoe> GetAllShoes()
         {
-            return db.Shoes;
+            return db.Shoes.Include(s => s.Brand).ToList();
         }
 
         public IBrand NewBrand()

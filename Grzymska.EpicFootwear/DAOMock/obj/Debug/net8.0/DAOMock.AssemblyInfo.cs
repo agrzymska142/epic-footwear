@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DAOMock")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4c78f6c74ec0407bacc09e0876e3e9844995419c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4b17f07ed681d8fc32cddf43346d7ac5356cab66")]
 [assembly: System.Reflection.AssemblyProductAttribute("DAOMock")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DAOMock")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

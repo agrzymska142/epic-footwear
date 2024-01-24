@@ -2604,7 +2604,8 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Agnieszka\\.nuget\\packages\\": {}
+    "C:\\Users\\Agnieszka\\.nuget\\packages\\": {},
+    "D:\\Programowanie\\IDE\\Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
@@ -2615,8 +2616,12 @@
       "packagesPath": "C:\\Users\\Agnieszka\\.nuget\\packages\\",
       "outputPath": "D:\\Studia\\Semestr VII\\Programowanie Wizualne\\epic-footwear\\Grzymska.EpicFootwear\\DAOSQL\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "D:\\Programowanie\\IDE\\Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
         "C:\\Users\\Agnieszka\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2624,6 +2629,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
