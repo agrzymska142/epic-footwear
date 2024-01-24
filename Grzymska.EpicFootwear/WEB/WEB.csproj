@@ -4,8 +4,8 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <BaseOutputPath>D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear\WEB\bin\Debug\net8.0\runtimes</BaseOutputPath>
-    <BaseIntermediateOutputPath>D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear\WEB\obj\Debug\net8.0</BaseIntermediateOutputPath>
+    <BaseOutputPath></BaseOutputPath>
+    <BaseIntermediateOutputPath></BaseIntermediateOutputPath>
     <RootNamespace>Grzymska.EpicFootwear.WEB</RootNamespace>
   </PropertyGroup>
 

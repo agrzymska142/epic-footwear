@@ -9,15 +9,12 @@
       {
         "name": "Microsoft.WindowsDesktop.App",
         "version": "8.0.0"
-      },
-      {
-        "name": "Microsoft.AspNetCore.App",
-        "version": "8.0.0"
       }
     ],
     "additionalProbingPaths": [
       "C:\\Users\\Agnieszka\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Agnieszka\\.nuget\\packages"
+      "C:\\Users\\Agnieszka\\.nuget\\packages",
+      "D:\\Programowanie\\IDE\\Visual Studio\\Shared\\NuGetPackages"
     ],
     "configProperties": {
       "System.Reflection.NullabilityInfoContext.IsSupported": true,

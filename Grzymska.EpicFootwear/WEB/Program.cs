@@ -3,7 +3,6 @@ using Grzymska.EpicFootwear.WEB.Components;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
@@ -12,10 +11,8 @@ builder.Services.AddSingleton<DataProvider>(provider =>
     IConfiguration configuration = provider.GetRequiredService<IConfiguration>();
     string daoName = configuration["DAO_Name"];
 
-    // Get the current working directory
     string currentDirectory = Directory.GetCurrentDirectory() + @"/bin/Debug/net8.0/";
 
-    // Construct the full path to the DAO DLL
     string daoPath = Path.Combine(currentDirectory, daoName);
 
     return new DataProvider(daoPath);

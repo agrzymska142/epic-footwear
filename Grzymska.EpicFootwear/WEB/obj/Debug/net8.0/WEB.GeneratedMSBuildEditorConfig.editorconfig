@@ -7,8 +7,8 @@ build_property.InvariantGlobalization =
 build_property.PlatformNeutralAssembly = 
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
-build_property.RootNamespace = WEB
-build_property.RootNamespace = WEB
+build_property.RootNamespace = Grzymska.EpicFootwear.WEB
+build_property.RootNamespace = Grzymska.EpicFootwear.WEB
 build_property.ProjectDir = D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear\WEB\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
@@ -22,20 +22,12 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBcHAucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Studia/Semestr VII/Programowanie Wizualne/epic-footwear/Grzymska.EpicFootwear/WEB/Components/Pages/Counter.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDb3VudGVyLnJhem9y
-build_metadata.AdditionalFiles.CssScope = 
-
 [D:/Studia/Semestr VII/Programowanie Wizualne/epic-footwear/Grzymska.EpicFootwear/WEB/Components/Pages/Error.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFcnJvci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Studia/Semestr VII/Programowanie Wizualne/epic-footwear/Grzymska.EpicFootwear/WEB/Components/Pages/Home.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xIb21lLnJhem9y
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/Studia/Semestr VII/Programowanie Wizualne/epic-footwear/Grzymska.EpicFootwear/WEB/Components/Pages/Weather.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xXZWF0aGVyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Studia/Semestr VII/Programowanie Wizualne/epic-footwear/Grzymska.EpicFootwear/WEB/Components/Routes.razor]
@@ -61,3 +53,11 @@ build_metadata.AdditionalFiles.CssScope = b-2saa0676of
 [D:/Studia/Semestr VII/Programowanie Wizualne/epic-footwear/Grzymska.EpicFootwear/WEB/Components/Pages/AddShoes.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBZGRTaG9lcy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-p1ig5myb0t
+
+[D:/Studia/Semestr VII/Programowanie Wizualne/epic-footwear/Grzymska.EpicFootwear/WEB/Components/Pages/BrandsList.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xCcmFuZHNMaXN0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-b2oksc089p
+
+[D:/Studia/Semestr VII/Programowanie Wizualne/epic-footwear/Grzymska.EpicFootwear/WEB/Components/Pages/ShoesList.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xTaG9lc0xpc3QucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-q7gx2njw29

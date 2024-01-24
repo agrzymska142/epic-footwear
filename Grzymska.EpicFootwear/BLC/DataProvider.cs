@@ -23,7 +23,7 @@ namespace Grzymska.EpicFootwear.BLC
 
             if (classToCreate != null)
             {
-                DAO = (IDAO)Activator.CreateInstance(classToCreate, []);
+                DAO = (IDAO)Activator.CreateInstance(classToCreate, null);
             }
         }
 

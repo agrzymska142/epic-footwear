@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Grzymska.EpicFootwear.UI" xmlns:views="clr-namespace:Grzymska.EpicFootwear.UI.Views"
         xmlns:viewmodels="clr-namespace:Grzymska.EpicFootwear.UI.ViewModels"
+         
          mc:Ignorable="d"
         Title="EpicFootwear" Height="450" Width="700">
     <Grid MaxWidth="700" MaxHeight="400">
@@ -22,7 +23,7 @@
 
             <Image Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Height="75" Margin="10,10,0,0" VerticalAlignment="Top" Width="193">
                 <Image.Source>
-                    <BitmapImage DecodePixelWidth="200" UriSource="D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\logo.png" />
+                    <BitmapImage DecodePixelWidth="200" UriSource="/Images/logo.png" />
                 </Image.Source>
             </Image>
 

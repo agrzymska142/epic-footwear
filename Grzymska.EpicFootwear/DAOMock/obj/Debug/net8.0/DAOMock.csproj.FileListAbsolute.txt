@@ -1,8 +1,3 @@
-D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear\DAOMock\obj\Debug\net8.0\DAOMock.GeneratedMSBuildEditorConfig.editorconfig
-D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear\DAOMock\obj\Debug\net8.0\DAOMock.AssemblyInfoInputs.cache
-D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear\DAOMock\obj\Debug\net8.0\DAOMock.AssemblyInfo.cs
-D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear\DAOMock\obj\Debug\net8.0\DAOMock.csproj.CoreCompileInputs.cache
-D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear\DAOMock\obj\Debug\net8.0\DAOMock.sourcelink.json
 D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear\DAOMock\bin\Debug\net8.0\DAOMock.deps.json
 D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear\DAOMock\bin\Debug\net8.0\DAOMock.dll
 D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear\DAOMock\bin\Debug\net8.0\DAOMock.pdb
@@ -11,6 +6,11 @@ D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear
 D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear\DAOMock\bin\Debug\net8.0\Interfaces.pdb
 D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear\DAOMock\bin\Debug\net8.0\Core.pdb
 D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear\DAOMock\obj\Debug\net8.0\DAOMock.csproj.AssemblyReference.cache
+D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear\DAOMock\obj\Debug\net8.0\DAOMock.GeneratedMSBuildEditorConfig.editorconfig
+D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear\DAOMock\obj\Debug\net8.0\DAOMock.AssemblyInfoInputs.cache
+D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear\DAOMock\obj\Debug\net8.0\DAOMock.AssemblyInfo.cs
+D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear\DAOMock\obj\Debug\net8.0\DAOMock.csproj.CoreCompileInputs.cache
+D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear\DAOMock\obj\Debug\net8.0\DAOMock.sourcelink.json
 D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear\DAOMock\obj\Debug\net8.0\DAOMock.csproj.CopyComplete
 D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear\DAOMock\obj\Debug\net8.0\DAOMock.dll
 D:\Studia\Semestr VII\Programowanie Wizualne\epic-footwear\Grzymska.EpicFootwear\DAOMock\obj\Debug\net8.0\refint\DAOMock.dll

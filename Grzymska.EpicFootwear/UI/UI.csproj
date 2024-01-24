@@ -6,12 +6,23 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
-    <ApplicationIcon>ikona.ico</ApplicationIcon>
+    <ApplicationIcon>Images\ikona.ico</ApplicationIcon>
 	<RootNamespace>Grzymska.EpicFootwear.UI</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="ikona.ico" />
+    <None Remove="Images\logo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Images\ikona.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\ikona.ico" />
+    <Resource Include="Images\logo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
   <ItemGroup>
@@ -21,12 +32,6 @@
   <ItemGroup>
     <ProjectReference Include="..\BLC\BLC.csproj" />
     <ProjectReference Include="..\INTERFACES\Interfaces.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="logo.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
 
 </Project>
