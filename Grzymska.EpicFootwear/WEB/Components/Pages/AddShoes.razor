@@ -1,5 +1,4 @@
-﻿<!-- AddShoes.razor -->
-@page "/shoes/add"
+﻿@page "/shoes/add"
 @page "/shoes/edit/{id:int}"
 
 @using Grzymska.EpicFootwear.Interfaces
@@ -55,9 +54,7 @@ else
     private IShoe Shoe { get; set; }
     private IEnumerable<Brand> Brands;
     private IEnumerable<ShoeType> ShoeTypes = (IEnumerable<ShoeType>)Enum.GetValues(typeof(ShoeType));
-
     private bool IsEditMode { get; set; }
-
     private int SelectedBrandId { get; set; }
 
     [Parameter]

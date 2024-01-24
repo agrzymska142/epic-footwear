@@ -18,8 +18,8 @@ else
         </div>
 
         <div class="search-bar">
-            <input class="filter-input" />
-            <button class="filter-button">Search</button>
+            <input class="filter-input" @bind="filterString" />
+            <button class="filter-button" @onclick="FilterBrands">Search</button>
         </div>
 
         <div class="brand-list">
@@ -35,15 +35,15 @@ else
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach (var brand in Brands)
+                    @foreach (var brand in FilteredBrands)
                     {
                         <tr>
                             <td>@brand.ID</td>
                             <td>@brand.Name</td>
                             <td>@brand.Country</td>
                             <td>@brand.Founded</td>
-                            <td><button class="edit-button">Edit</button></td>
-                            <td><button class="delete-button">Delete</button></td>
+                            <td><button class="edit-button" @onclick='() => NavigationManager.NavigateTo($"/brands/edit/{brand.ID}")'>Edit</button></td>
+                            <td><button class="delete-button" @onclick="() => DeleteBrand(brand.ID)">Delete</button></td>
                         </tr>
                     }
                 </tbody>
@@ -56,10 +56,37 @@ else
 
 @code {
     private IEnumerable<Brand> Brands;
+    private IEnumerable<Brand> FilteredBrands;
+    private string filterString = string.Empty;
 
+
+    private async Task GetBrands()
+    {
+        Brands = await httpClient.GetFromJsonAsync<IEnumerable<Brand>>("https://localhost:7209/api/brands");
+        FilterBrands();
+    }
+
+    private void FilterBrands()
+    {
+        if (string.IsNullOrWhiteSpace(filterString))
+        {
+            FilteredBrands = Brands;
+        }
+        else
+        {
+            FilteredBrands = Brands.Where(brand => brand.Name.Contains(filterString, StringComparison.OrdinalIgnoreCase));
+        }
+    }
 
     protected override async Task OnInitializedAsync()
     {
-        Brands = await httpClient.GetFromJsonAsync<IEnumerable<Brand>>("https://localhost:7209/api/brands");
+        await GetBrands();
+        FilterBrands();
+    }
+
+    private async Task DeleteBrand(int id)
+    {
+        await httpClient.DeleteAsync($"https://localhost:7209/api/brands/{id}");
+        await GetBrands();
     }
 }

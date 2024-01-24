@@ -49,7 +49,15 @@ namespace WEB.Controllers
         [HttpPost]
         public ActionResult<string> SaveShoe([FromBody] Shoe newShoe)
         {
-            _dataProvider.SaveShoe(newShoe);
+            IShoe newIShoe = _dataProvider.NewShoe();
+            newIShoe.ID = newShoe.ID;
+            newIShoe.Name = newShoe.Name;
+            newIShoe.ShoeType = newShoe.ShoeType;
+
+            IBrand newIBrand = _dataProvider.GetAllBrands().FirstOrDefault(b => b.ID == newShoe.Brand.ID);
+            newIShoe.Brand = newIBrand;
+
+            _dataProvider.SaveShoe(newIShoe);
             return Ok("Shoe saved successfully.");
         }
 

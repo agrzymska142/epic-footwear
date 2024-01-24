@@ -49,7 +49,14 @@ namespace WEB.Controllers
         [HttpPost]
         public ActionResult<string> SaveBrand([FromBody] Brand newBrand)
         {
-            _dataProvider.SaveBrand(newBrand);
+            IBrand newIBrand = _dataProvider.NewBrand();
+            newIBrand.ID = newBrand.ID;
+            newIBrand.Name = newBrand.Name;
+            newIBrand.Country = newBrand.Country;
+            newIBrand.Founded = newBrand.Founded;
+
+            _dataProvider.SaveBrand(newIBrand);
+
             return Ok("Brand saved successfully.");
         }
 

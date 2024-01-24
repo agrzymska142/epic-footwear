@@ -28,7 +28,6 @@ namespace Grzymska.EpicFootwear.UI.ViewModels
             _editBrandCommand = new EditBrandCommand(this, brandListViewNavigationService);
         }
 
-        // raczej do usunięcia później
         public BrandViewModel(DataProvider provider, NavigationService brandListViewNavigationService)
         {
             _provider = provider;
