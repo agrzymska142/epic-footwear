@@ -1,0 +1,55 @@
+﻿ <Window x:Class="Grzymska.EpicFootwear.UI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Grzymska.EpicFootwear.UI" xmlns:views="clr-namespace:Grzymska.EpicFootwear.UI.Views"
+        xmlns:viewmodels="clr-namespace:Grzymska.EpicFootwear.UI.ViewModels"
+         
+         mc:Ignorable="d"
+        Title="EpicFootwear" Height="450" Width="700">
+    <Grid MaxWidth="700" MaxHeight="400">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Image Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Height="75" Margin="10,10,0,0" VerticalAlignment="Top" Width="193">
+                <Image.Source>
+                    <BitmapImage DecodePixelWidth="200" UriSource="/Images/logo.png" />
+                </Image.Source>
+            </Image>
+
+            <Button Grid.Column="1" Content="Shoes List" Margin="10 10 10 0" VerticalAlignment="Center" Command="{Binding SeeShoeListCommand}"/>
+            <Button Grid.Column="2" Content="Brands List" Margin="10 10 10 0" VerticalAlignment="Center" HorizontalAlignment="Left" Command="{Binding SeeBrandListCommand}" />
+        </Grid>
+
+        <Grid Grid.Row="1" Margin="20 20">
+            <Grid.Resources>
+                <DataTemplate DataType="{x:Type viewmodels:ShoeListViewModel}">
+                    <views:ViewShoes />
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type viewmodels:BrandListViewModel}">
+                    <views:ViewBrands />
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type viewmodels:ShoeViewModel}">
+                    <views:AddShoes />
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type viewmodels:BrandViewModel}">
+                    <views:AddBrand />
+                </DataTemplate>
+            </Grid.Resources>
+
+            <ContentControl Content="{Binding CurrentViewModel}" />
+
+        </Grid>
+       
+    </Grid>
+</Window>

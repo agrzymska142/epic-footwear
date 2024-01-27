@@ -1,0 +1,16 @@
+﻿/* AddShoes.razor.css */
+.container {
+    width: 250px;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.label {
+    font-size: 17px;
+}
+
+.button-group {
+    margin-top: 25px;
+}
