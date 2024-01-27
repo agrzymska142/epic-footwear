@@ -53,7 +53,7 @@ namespace Grzymska.EpicFootwear.UI.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/UI;component/views/viewbrands.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/UI;V1.0.0.0;component/views/viewbrands.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\ViewBrands.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
